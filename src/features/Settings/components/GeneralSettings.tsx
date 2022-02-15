@@ -6,7 +6,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import styled from 'styled-components';
 
 import { DashboardPanel, Divider, LinkApp, SubHeading, Switch, Tooltip } from '@components';
-import { Fiats, PRIVACY_POLICY_LINK, ROUTE_PATHS } from '@config';
+import { Fiats, ROUTE_PATHS } from '@config';
 import { getEIP1559FeatureFlag, setEIP1559FeatureFlag } from '@helpers';
 import {
   AppState,
@@ -60,13 +60,8 @@ const SelectContainer = styled.div`
 
 const GeneralSettings = ({
   fiatCurrency,
-  setFiat,
-  canTrackProductAnalytics,
-  setProductAnalyticsAuthorisation
+  setFiat
 }: Props) => {
-  const toggleAnalytics = () => {
-    setProductAnalyticsAuthorisation(!canTrackProductAnalytics);
-  };
 
   const [eip1559, setEIP1559] = useState(getEIP1559FeatureFlag());
 
@@ -125,29 +120,6 @@ const GeneralSettings = ({
             $greyable={true}
             checked={getEIP1559FeatureFlag()}
             onChange={toggleEIP1559}
-            labelLeft="OFF"
-            labelRight="ON"
-          />
-        </SettingsControl>
-      </SettingsField>
-      <SettingsField>
-        <SubHeading fontWeight="initial">
-          {translate('SETTINGS_PRODUCT_ANALYTICS')}{' '}
-          <Tooltip
-            width="16px"
-            tooltip={
-              <span>
-                {translate('SETTINGS_PRODUCT_ANALYTICS_TOOLTIP', { $link: PRIVACY_POLICY_LINK })}
-              </span>
-            }
-          />
-        </SubHeading>
-        <SettingsControl>
-          <Switch
-            id="toggle-analytics"
-            $greyable={true}
-            checked={canTrackProductAnalytics}
-            onChange={toggleAnalytics}
             labelLeft="OFF"
             labelRight="ON"
           />

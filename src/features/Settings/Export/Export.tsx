@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 import { Box, ContentPanel, Downloader, InlineMessage } from '@components';
 import { getCurrentDBConfig, getExportFileName } from '@database';
-import { useAnalytics } from '@services';
 import { useUserActions } from '@services/Store';
 import { AppState, exportState } from '@store';
 import translate, { translateRaw } from '@translations';
@@ -22,7 +21,6 @@ export function Export(props: Props) {
   const { history, appState } = props;
   const onBack = () => goBack(history);
   const { isMobile } = useScreenSize();
-  const { track } = useAnalytics();
 
   const { updateUserAction, findUserAction } = useUserActions();
 
@@ -42,7 +40,6 @@ export function Export(props: Props) {
           fileName={getExportFileName(getCurrentDBConfig(), new Date())}
           data={appState}
           onClick={() => {
-            track({ action: 'Export AppState' });
             if (backupAction) {
               updateUserAction(backupAction.uuid, {
                 ...backupAction,

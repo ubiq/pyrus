@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { Box, Icon, LinkApp, Text } from '@components';
-import { useAnalytics } from '@services/Analytics';
 import { SPACING } from '@theme';
 import { IExternalLink } from '@types';
 
@@ -14,14 +13,8 @@ const SBox = styled(Box)`
 `;
 
 export const TrayLink = ({ item }: { item: IExternalLink }) => {
-  const { trackLink } = useAnalytics();
-
-  const handleClick = () => {
-    trackLink({ url: item.link });
-  };
-
   return (
-    <LinkApp href={item.link} isExternal={true} onClick={handleClick}>
+    <LinkApp href={item.link} isExternal={true}>
       <SBox variant="rowAlign" my={SPACING.SM}>
         <Icon type={item.icon} width={{ _: '20px', sm: '2vh', xxl: '20px' }} />
         <Text
