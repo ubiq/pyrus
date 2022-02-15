@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { Box, Icon, LinkApp, Text, TIcon } from '@components';
-import { useAnalytics } from '@services/Analytics';
 import { SPACING } from '@theme';
 import { translateRaw } from '@translations';
 import { COMMIT_HASH } from '@utils';
@@ -16,8 +15,8 @@ const SBox = styled(Box)<{ animation: 'small' | 'big' }>`
   transition: all 300ms ease;
 `;
 
-const SocialLink = ({ icon, link, onClick }: { icon: string; link: string; onClick(): void }) => (
-  <LinkApp href={link} isExternal={true} onClick={onClick}>
+const SocialLink = ({ icon, link }: { icon: string; link: string }) => (
+  <LinkApp href={link} isExternal={true}>
     <SBox
       animation="big"
       variant="rowCenter"
@@ -34,15 +33,13 @@ const SocialLink = ({ icon, link, onClick }: { icon: string; link: string; onCli
 const MYCLink = ({
   title,
   icon,
-  link,
-  onClick
+  link
 }: {
   title: string;
   icon: string;
-  link: string;
-  onClick(): void;
+  link: string
 }) => (
-  <LinkApp variant="barren" href={link} isExternal={true} onClick={onClick}>
+  <LinkApp variant="barren" href={link} isExternal={true}>
     <SBox
       animation="small"
       variant="rowAlign"
@@ -61,19 +58,13 @@ const MYCLink = ({
 );
 
 export const LinkSet = () => {
-  const { trackLink } = useAnalytics();
-
-  const handleClick = (item: { link: string }) => {
-    trackLink({ url: item.link });
-  };
-
   return (
     <Box px={SPACING.SM} pb={SPACING.BASE} pt={SPACING.SM}>
       {COMMIT_HASH && (
         <Box variant="rowAlign" justifyContent="flex-end">
           {'v.'}
           <LinkApp
-            href={`https://github.com/MyCryptoHQ/MyCrypto/commit/${COMMIT_HASH}`}
+            href={`https://github.com/ubiq/pyrus/commit/${COMMIT_HASH}`}
             isExternal={true}
           >
             {COMMIT_HASH.substr(0, 7)}
@@ -91,7 +82,7 @@ export const LinkSet = () => {
       </Text>
       <Box variant="rowAlign" justifyContent="space-between" mb={SPACING.MD}>
         {socialLinks.map((item, i) => (
-          <SocialLink key={i} {...item} onClick={() => handleClick(item)} />
+          <SocialLink key={i} {...item} />
         ))}
       </Box>
       <Text
@@ -105,7 +96,7 @@ export const LinkSet = () => {
       </Text>
       <Box width="100%" mb={SPACING.MD}>
         {MYCLinks.map((item, i) => (
-          <MYCLink key={i} {...item} onClick={() => handleClick(item)} />
+          <MYCLink key={i} {...item} />
         ))}
       </Box>
     </Box>

@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 import { Box, Icon, Text } from '@components';
 import { donationAddressMap } from '@config';
-import { useAnalytics } from '@services/Analytics';
 import { SPACING, theme } from '@theme';
 import { translateRaw } from '@translations';
 import { TTrayItem } from '@types';
@@ -29,7 +28,6 @@ const Button = styled(Box)`
 
 export const SupportUsTray = ({ items }: { items: TTrayItem[] }) => {
   const [displayingMessage, setDisplayingMessage] = useState(false);
-  const { track } = useAnalytics();
   const [isReady, clear, set] = useTimeoutFn(() => setDisplayingMessage(false), 3000);
 
   useEffectOnce(() => clear());
@@ -41,13 +39,6 @@ export const SupportUsTray = ({ items }: { items: TTrayItem[] }) => {
       set();
     }
   }, [setDisplayingMessage]);
-
-  const trackDonationClicked = (title: string) => {
-    track({
-      action: 'Donate clicked',
-      name: title
-    });
-  };
 
   return (
     <>
@@ -70,7 +61,6 @@ export const SupportUsTray = ({ items }: { items: TTrayItem[] }) => {
             text={donationAddressMap.ETH}
             onCopy={() => {
               displayMessage();
-              trackDonationClicked('Ethereum');
             }}
           >
             <Button
@@ -96,7 +86,6 @@ export const SupportUsTray = ({ items }: { items: TTrayItem[] }) => {
             text={donationAddressMap.BTC}
             onCopy={() => {
               displayMessage();
-              trackDonationClicked('Bitcoin');
             }}
           >
             <Button

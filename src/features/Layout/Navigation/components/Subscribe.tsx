@@ -5,7 +5,6 @@ import { object, string } from 'yup';
 
 import { Body, Box, Button, Input, Text } from '@components';
 import { subscribeToMailingList } from '@services';
-import { useAnalytics } from '@services/Analytics';
 import { SPACING } from '@theme';
 import translate, { translateRaw } from '@translations';
 
@@ -19,11 +18,9 @@ const initialFormikValues: FormValues = {
 
 export const Subscribe = () => {
   const [submitted, setSubmitted] = useState<boolean>(false);
-  const { track } = useAnalytics();
 
   const subscribe = (formValues: FormValues) => {
     subscribeToMailingList(formValues.email).then(() => setSubmitted(true));
-    track({ action: 'Newsletter subscription' });
   };
 
   const Schema = object().shape({

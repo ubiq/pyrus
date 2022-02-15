@@ -205,16 +205,6 @@ export const MYCLinks = [
     icon: 'nav-blog'
   },
   {
-    title: translateRaw('NEW_FOOTER_TEXT_8'),
-    link: 'https://mycrypto.com/about',
-    icon: 'nav-team'
-  },
-  {
-    title: translateRaw('NEW_FOOTER_TEXT_9'),
-    link: 'mailto:press@mycrypto.com',
-    icon: 'nav-press'
-  },
-  {
     title: translateRaw('NEW_FOOTER_TEXT_10'),
     link: 'https://mycrypto.com/privacy/',
     icon: 'nav-privacy'

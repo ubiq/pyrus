@@ -44,14 +44,8 @@ export const LegacyRoutesHandler = withRouter((props) => {
       case '#generate-wallet':
         history.push('/');
         break;
-      case '#swap':
-        history.push('/swap');
-        break;
       case '#contracts':
         history.push('/contracts');
-        break;
-      case '#ens':
-        history.push('/ens');
         break;
       case '#view-wallet-info':
         history.push('/account/info');
