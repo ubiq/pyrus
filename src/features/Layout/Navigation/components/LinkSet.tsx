@@ -6,8 +6,7 @@ import { SPACING } from '@theme';
 import { translateRaw } from '@translations';
 import { COMMIT_HASH } from '@utils';
 
-import { MYCLinks, productsLinks, socialLinks, supportUsTray } from '../constants';
-import { SupportUsTray } from './SupportUsTray';
+import { MYCLinks, socialLinks } from '../constants';
 
 const SBox = styled(Box)<{ animation: 'small' | 'big' }>`
   &:hover {
@@ -61,26 +60,7 @@ const MYCLink = ({
   </LinkApp>
 );
 
-const ProductLink = ({
-  title,
-  link,
-  onClick
-}: {
-  title: string;
-  link: string;
-  onClick(): void;
-}) => (
-  <LinkApp width="48%" href={link} isExternal={true} onClick={onClick} variant="opacityLink">
-    <Box variant="rowAlign" my={SPACING.SM}>
-      <Icon type="nav-new-tab" width="24px" />
-      <Text ml={SPACING.SM} mb={0} fontSize="14px">
-        {title}
-      </Text>
-    </Box>
-  </LinkApp>
-);
-
-export const LinkSet = ({ isMobile }: { isMobile: boolean }) => {
+export const LinkSet = () => {
   const { trackLink } = useAnalytics();
 
   const handleClick = (item: { link: string }) => {
@@ -126,21 +106,6 @@ export const LinkSet = ({ isMobile }: { isMobile: boolean }) => {
       <Box width="100%" mb={SPACING.MD}>
         {MYCLinks.map((item, i) => (
           <MYCLink key={i} {...item} onClick={() => handleClick(item)} />
-        ))}
-      </Box>
-      {isMobile && <SupportUsTray items={supportUsTray.items} />}
-      <Text
-        fontSize="14px"
-        color="GREYISH_BROWN"
-        textTransform="uppercase"
-        fontWeight="700"
-        mb={SPACING.SM}
-      >
-        {translateRaw('NAVIGATION_OTHER_PRODUCTS')}
-      </Text>
-      <Box variant="rowAlign" flexWrap="wrap" justifyContent="space-between">
-        {productsLinks.map((item, i) => (
-          <ProductLink key={i} {...item} onClick={() => handleClick(item)} />
         ))}
       </Box>
     </Box>

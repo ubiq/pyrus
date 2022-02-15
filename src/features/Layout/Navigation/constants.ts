@@ -1,4 +1,3 @@
-import { CRYPTOSCAMDB, EXT_URLS } from '@config';
 import { IAppRoutes } from '@routing/routes';
 import { translateRaw } from '@translations';
 import { INavTray, IRouteLink } from '@types';
@@ -21,24 +20,10 @@ export const desktopLinks = (APP_ROUTES: IAppRoutes) => {
     },
     {
       type: 'internal',
-      title: translateRaw('NAVIGATION_SWAP'),
-      to: APP_ROUTES.SWAP.path,
-      enabled: APP_ROUTES.SWAP.enabled,
-      icon: 'nav-swap'
-    },
-    {
-      type: 'internal',
       title: translateRaw('NAVIGATION_RECEIVE'),
       to: APP_ROUTES.REQUEST_ASSETS.path,
       enabled: APP_ROUTES.REQUEST_ASSETS.enabled,
       icon: 'nav-receive'
-    },
-    {
-      type: 'internal',
-      title: translateRaw('NAVIGATION_BUY'),
-      to: APP_ROUTES.BUY.path,
-      enabled: APP_ROUTES.BUY.enabled,
-      icon: 'nav-buy'
     },
     {
       type: 'internal',
@@ -88,27 +73,6 @@ export const toolsTray = (APP_ROUTES: IAppRoutes) => {
       },
       {
         type: 'internal',
-        to: APP_ROUTES.ENS.path,
-        enabled: APP_ROUTES.ENS.enabled,
-        title: translateRaw('NAVIGATION_ENS'),
-        icon: 'nav-ens'
-      },
-      {
-        type: 'internal',
-        to: APP_ROUTES.TOKEN_MIGRATION.path,
-        enabled: APP_ROUTES.TOKEN_MIGRATION.enabled,
-        title: translateRaw('NAVIGATION_MIGRATE'),
-        icon: 'nav-migrate'
-      },
-      {
-        type: 'internal',
-        to: APP_ROUTES.FAUCET.path,
-        enabled: APP_ROUTES.FAUCET.enabled,
-        title: translateRaw('NAVIGATION_FAUCET'),
-        icon: 'nav-faucet'
-      },
-      {
-        type: 'internal',
         to: APP_ROUTES.NFT_DASHBOARD.path,
         enabled: APP_ROUTES.NFT_DASHBOARD.enabled,
         title: translateRaw('NFT_DASHBOARD'),
@@ -117,45 +81,6 @@ export const toolsTray = (APP_ROUTES: IAppRoutes) => {
     ]
   };
   return Links;
-};
-
-export const supportUsTray: INavTray = {
-  type: 'tray',
-  title: translateRaw('NAVIGATION_SUPPORT_US'),
-  enabled: true,
-  icon: 'nav-support-us',
-  items: [
-    {
-      type: 'external',
-      title: translateRaw('NAVIGATION_GET_A_LEDGER'),
-      link: EXT_URLS.LEDGER_REFERRAL.url,
-      icon: 'nav-ledger'
-    },
-    {
-      type: 'external',
-      title: translateRaw('NAVIGATION_GET_A_TREZOR'),
-      link: EXT_URLS.TREZOR_REFERRAL.url,
-      icon: 'nav-trezor'
-    },
-    {
-      type: 'external',
-      title: translateRaw('NAVIGATION_GET_QUICKNODE'),
-      link: EXT_URLS.QUICKNODE_REFERRAL.url,
-      icon: 'nav-quicknode'
-    },
-    {
-      type: 'external',
-      title: translateRaw('NAVIGATION_BUY_ETH'),
-      link: EXT_URLS.COINBASE_REFERRAL.url,
-      icon: 'nav-coinbase'
-    },
-    {
-      type: 'external',
-      title: translateRaw('NAVIGATION_UNSTOPPABLE'),
-      link: EXT_URLS.UNSTOPPABLEDOMAINS_REFERRAL.url,
-      icon: 'nav-unstoppable'
-    }
-  ]
 };
 
 export const settingsLinks = (APP_ROUTES: IAppRoutes) => {
@@ -179,13 +104,6 @@ export const mobileLinks = (APP_ROUTES: IAppRoutes) => {
       icon: 'nav-home'
     },
     {
-      type: 'internal',
-      title: translateRaw('NAVIGATION_SEND'),
-      to: APP_ROUTES.SEND.path,
-      enabled: APP_ROUTES.SEND.enabled,
-      icon: 'nav-send'
-    },
-    {
       type: 'tray',
       title: translateRaw('NAVIGATION_ASSETS'),
       enabled: true,
@@ -200,24 +118,10 @@ export const mobileLinks = (APP_ROUTES: IAppRoutes) => {
         },
         {
           type: 'internal',
-          title: translateRaw('NAVIGATION_SWAP'),
-          to: APP_ROUTES.SWAP.path,
-          enabled: APP_ROUTES.SWAP.enabled,
-          icon: 'nav-swap'
-        },
-        {
-          type: 'internal',
           title: translateRaw('NAVIGATION_RECEIVE'),
           to: APP_ROUTES.REQUEST_ASSETS.path,
           enabled: APP_ROUTES.REQUEST_ASSETS.enabled,
           icon: 'nav-receive'
-        },
-        {
-          type: 'internal',
-          title: translateRaw('NAVIGATION_BUY'),
-          to: APP_ROUTES.BUY.path,
-          enabled: APP_ROUTES.BUY.enabled,
-          icon: 'nav-buy'
         }
       ]
     },
@@ -257,27 +161,6 @@ export const mobileLinks = (APP_ROUTES: IAppRoutes) => {
         },
         {
           type: 'internal',
-          to: APP_ROUTES.ENS.path,
-          enabled: APP_ROUTES.ENS.enabled,
-          title: translateRaw('NAVIGATION_ENS'),
-          icon: 'nav-ens'
-        },
-        {
-          type: 'internal',
-          to: APP_ROUTES.TOKEN_MIGRATION.path,
-          enabled: APP_ROUTES.TOKEN_MIGRATION.enabled,
-          title: translateRaw('NAVIGATION_MIGRATE'),
-          icon: 'nav-migrate'
-        },
-        {
-          type: 'internal',
-          to: APP_ROUTES.FAUCET.path,
-          enabled: APP_ROUTES.FAUCET.enabled,
-          title: translateRaw('NAVIGATION_FAUCET'),
-          icon: 'nav-faucet'
-        },
-        {
-          type: 'internal',
           to: APP_ROUTES.NFT_DASHBOARD.path,
           enabled: APP_ROUTES.NFT_DASHBOARD.enabled,
           title: translateRaw('NFT_DASHBOARD'),
@@ -298,31 +181,19 @@ export const mobileLinks = (APP_ROUTES: IAppRoutes) => {
 
 export const socialLinks = [
   {
-    link: 'https://twitter.com/mycrypto',
+    link: 'https://twitter.com/ubiqsmart',
     icon: 'nav-twitter'
   },
   {
-    link: 'https://www.facebook.com/mycryptoHQ/',
-    icon: 'nav-facebook'
-  },
-  {
-    link: 'https://instagram.com/mycryptohq',
-    icon: 'nav-instagram'
-  },
-  {
-    link: 'https://www.linkedin.com/company/mycrypto',
-    icon: 'nav-linkedin'
-  },
-  {
-    link: 'https://github.com/MyCryptoHQ',
+    link: 'https://github.com/ubiq',
     icon: 'nav-github'
   },
   {
-    link: 'https://www.reddit.com/r/mycrypto/',
+    link: 'https://www.reddit.com/r/ubiq/',
     icon: 'nav-reddit'
   },
   {
-    link: 'https://discord.gg/VSaTXEA',
+    link: 'https://discord.com/invite/ubiq',
     icon: 'nav-discord'
   }
 ];
@@ -330,7 +201,7 @@ export const socialLinks = [
 export const MYCLinks = [
   {
     title: translateRaw('NEW_FOOTER_TEXT_11'),
-    link: 'https://blog.mycrypto.com/',
+    link: 'https://blog.ubiqsmart.com/',
     icon: 'nav-blog'
   },
   {
@@ -352,25 +223,5 @@ export const MYCLinks = [
     title: translateRaw('NAVIGATION_DISCLAIMER'),
     link: 'https://mycrypto.com/disclaimer',
     icon: 'nav-disclaimer'
-  }
-];
-
-export const productsLinks = [
-  {
-    title: 'EtherAddressLookup',
-    link:
-      'https://chrome.google.com/webstore/detail/etheraddresslookup/pdknmigbbbhmllnmgdfalmedcmcefdfn'
-  },
-  {
-    title: 'CryptoScamDB',
-    link: CRYPTOSCAMDB
-  },
-  {
-    title: 'MoneroVision',
-    link: 'https://monerovision.com/'
-  },
-  {
-    title: 'FindETH',
-    link: 'https://findeth.io'
   }
 ];

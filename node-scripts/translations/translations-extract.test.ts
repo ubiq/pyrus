@@ -1,10 +1,6 @@
 import fs from 'fs';
 
-import excludedTranslationKeys from './excludedTranslationKeys.json';
 import {
-  findTranslationKeys,
-  getJsonKeys,
-  PROJECT_FILE_PATTERN,
   translationKeysExtract,
   updateJsonTranslations
 } from './translations-extract';
@@ -44,18 +40,6 @@ describe('Translations extract', () => {
         {}
       )
     );
-  });
-
-  it('Check that all translation keys are in-use', () => {
-    const extractedKeys = Object.keys(translationKeysExtract(PROJECT_FILE_PATTERN));
-    const jsonKeys = getJsonKeys();
-    jsonKeys.forEach((language) => {
-      const matchedKeys = findTranslationKeys(PROJECT_FILE_PATTERN, language);
-      const keysInUse = [
-        ...new Set([...extractedKeys, ...matchedKeys, ...excludedTranslationKeys])
-      ];
-      expect(keysInUse.sort()).toStrictEqual(language.sort());
-    });
   });
 
   it('Should create json and update it', () => {

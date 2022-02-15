@@ -5,7 +5,7 @@ import { translateRaw } from '@translations';
 import { LinkSet } from '../LinkSet';
 
 function getComponent() {
-  return simpleRender(<LinkSet isMobile={true} />);
+  return simpleRender(<LinkSet />);
 }
 
 describe('LinkSet', () => {

@@ -19,43 +19,33 @@ export const DOWNLOAD_MYCRYPTO_LINK = 'https://download.mycrypto.com';
 
 export const SUBSCRIBE_NEWSLETTER_LINK = 'http://eepurl.com/ggh4r5';
 
-export const MYCRYPTO_PROD_LINK = 'https://app.mycrypto.com';
+export const MYCRYPTO_PROD_LINK = 'https://pyrus.ubiqsmart.com';
 
 export const MYCRYPTO_FAUCET_LINK = `${MYCRYPTO_PROD_LINK}/faucet`;
 
 export const socialMediaLinks: Link[] = [
   {
-    link: 'https://twitter.com/mycrypto',
+    link: 'https://twitter.com/ubiqsmart',
     text: 'twitter',
     icon: null
   },
   {
-    link: 'https://www.facebook.com/mycryptoHQ/',
-    text: 'facebook',
-    icon: null
-  },
-  {
-    link: 'https://medium.com/@mycrypto',
+    link: 'https://blog.ubiqsmart.com',
     text: 'medium',
     icon: null
   },
   {
-    link: 'https://www.linkedin.com/company/mycrypto',
-    text: 'linkedin',
-    icon: null
-  },
-  {
-    link: 'https://github.com/MyCryptoHQ',
+    link: 'https://github.com/ubiq',
     text: 'github',
     icon: null
   },
   {
-    link: 'https://www.reddit.com/r/mycrypto/',
+    link: 'https://www.reddit.com/r/ubiq/',
     text: 'reddit',
     icon: null
   },
   {
-    link: 'https://discord.gg/VSaTXEA',
+    link: 'https://discord.com/invite/ubiq',
     text: 'discord',
     icon: null
   },

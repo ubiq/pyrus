@@ -5,7 +5,6 @@ import {
   ANTv1UUID,
   DAPPNODE_AIRDROP_LINK,
   ENS_AIRDROP_LINK,
-  ETHUUID,
   EXT_URLS,
   FAUCET_NETWORKS,
   GIV_AIRDROP_LINK,
@@ -372,25 +371,6 @@ export const actionTemplates: ActionTemplate[] = [
         shouldComplete: true,
         to: socialMediaLinks.find((i) => i.text === 'telegram')!.link,
         external: true
-      }
-    },
-    category: ACTION_CATEGORIES.OTHER
-  },
-  {
-    name: ACTION_NAME.SWAP,
-    heading: translateRaw('SWAP_ACTION_HEADING'),
-    icon: 'swap',
-    body: [translate('SWAP_ACTION_BODY')],
-    filter: ({ assets }: ActionFilters) =>
-      assets.some((a) => a.uuid === ETHUUID) && assets.some((a) => a.uuid !== ETHUUID),
-    priority: 0,
-    button: {
-      component: ActionButton,
-      props: {
-        content: translateRaw('SWAP_ACTION_BUTTON'),
-        shouldComplete: true,
-        to: ROUTE_PATHS.SWAP.path,
-        external: false
       }
     },
     category: ACTION_CATEGORIES.OTHER
