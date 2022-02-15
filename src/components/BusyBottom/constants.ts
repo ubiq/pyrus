@@ -1,10 +1,4 @@
-import {
-  EXT_URLS,
-  getKBHelpArticle,
-  KB_HELP_ARTICLE,
-  ROUTE_PATHS,
-  WALLETS_CONFIG
-} from '@config';
+import { EXT_URLS, getKBHelpArticle, KB_HELP_ARTICLE, ROUTE_PATHS, WALLETS_CONFIG } from '@config';
 import { BusyBottomConfig, WalletId } from '@types';
 import { getWeb3Config } from '@utils';
 

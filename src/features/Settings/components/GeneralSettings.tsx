@@ -58,11 +58,7 @@ const SelectContainer = styled.div`
   }
 `;
 
-const GeneralSettings = ({
-  fiatCurrency,
-  setFiat
-}: Props) => {
-
+const GeneralSettings = ({ fiatCurrency, setFiat }: Props) => {
   const [eip1559, setEIP1559] = useState(getEIP1559FeatureFlag());
 
   const toggleEIP1559 = () => {
