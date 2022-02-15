@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Read .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
         id: nvm
 
       - name: Setup node ${{ steps.nvm.outputs.NVMRC }}
