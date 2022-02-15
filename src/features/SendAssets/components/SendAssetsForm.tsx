@@ -33,8 +33,6 @@ import {
   ROUTE_PATHS
 } from '@config';
 import { getFiat } from '@config/fiats';
-import { checkFormForProtectTxErrors } from '@features/ProtectTransaction';
-import { ProtectTxShowError } from '@features/ProtectTransaction/components/ProtectTxShowError';
 import { ProtectTxContext } from '@features/ProtectTransaction/ProtectTxProvider';
 import { isEIP1559Supported } from '@helpers';
 import { useGasForm } from '@hooks';
@@ -190,7 +188,7 @@ interface ISendFormProps extends IStepComponentProps {
   protectTxButton?(): JSX.Element;
 }
 
-export const SendAssetsForm = ({ txConfig, onComplete, protectTxButton }: ISendFormProps) => {
+export const SendAssetsForm = ({ txConfig, onComplete }: ISendFormProps) => {
   const accounts = useSelector(getStoreAccounts);
   const networks = useSelector(selectNetworks);
   const { getAssetRate } = useRates();
@@ -235,7 +233,6 @@ export const SendAssetsForm = ({ txConfig, onComplete, protectTxButton }: ISendF
   const defaultNetwork = getDefaultNetwork(defaultAccount);
 
   const {
-    protectTxFeatureFlag,
     state: ptxState,
     updateFormValues,
     goToInitialStepOrFetchReport
@@ -798,7 +795,6 @@ export const SendAssetsForm = ({ txConfig, onComplete, protectTxButton }: ISendF
           </div>
         )}
       </div>
-      {protectTxFeatureFlag && protectTxButton && protectTxButton()}
       <Button
         type="submit"
         onClick={() => {
@@ -820,16 +816,6 @@ export const SendAssetsForm = ({ txConfig, onComplete, protectTxButton }: ISendF
       )}
       {!formHasErrors && !gasEstimationError && !userCanAffordTX && (
         <InlineMessage value={translate('NOT_ENOUGH_GAS', { $baseAsset: baseAsset.ticker })} />
-      )}
-      {protectTxFeatureFlag && (
-        <ProtectTxShowError
-          protectTxError={checkFormForProtectTxErrors(
-            values,
-            getAssetRate(values.asset),
-            ptxState.isPTXFree
-          )}
-          shown={isFormValid}
-        />
       )}
     </div>
   );
