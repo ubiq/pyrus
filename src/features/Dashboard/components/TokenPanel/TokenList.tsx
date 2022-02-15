@@ -13,7 +13,6 @@ import {
   Text,
   Tooltip
 } from '@components';
-import { ROUTE_PATHS } from '@config';
 import { getIsMyCryptoMember, useSelector } from '@store';
 import { BREAK_POINTS, COLORS, FONT_SIZE, SPACING } from '@theme';
 import translate, { Trans, translateRaw } from '@translations';
@@ -63,10 +62,10 @@ const MoreIcon = styled(Icon)`
 `;
 
 const TokenDashboardPanel = styled(DashboardPanel)<{ isMyCryptoMember: boolean }>`
-  max-height: 866px;
+  max-height: 800px;
   @media (min-width: ${BREAK_POINTS.SCREEN_SM}) {
     min-height: 430px;
-    height: ${(props) => (props.isMyCryptoMember ? '660px' : '866px')};
+    height: ${(props) => (props.isMyCryptoMember ? '660px' : '800px')};
   }
 `;
 
@@ -160,14 +159,7 @@ export function TokenList(props: TokenListProps) {
               </Heading>
               <Body color={COLORS.BLUE_GREY} textAlign="center">
                 <Trans
-                  id="NO_TOKENS_CONTENT"
-                  variables={{
-                    $link: () => (
-                      <LinkApp href={ROUTE_PATHS.SWAP.path}>
-                        {translateRaw('GET_SOME_HERE')}
-                      </LinkApp>
-                    )
-                  }}
+                  id=""
                 />
               </Body>
             </>
