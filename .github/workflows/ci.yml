@@ -80,10 +80,10 @@ jobs:
         run: yarn build
 
       - name: Zip standalone build folder
-        run: zip -r dist/web/standalone_mycrypto.zip dist/web/
+        run: zip -r dist/web/standalone_pyrus.zip dist/web/
 
-      - name: 'Save standalone_mycrypto.zip to artifacts'
+      - name: 'Save standalone_pyrus.zip to artifacts'
         uses: actions/upload-artifact@v1
         with:
-          name: 'standalone_mycrypto'
-          path: 'dist/web/standalone_mycrypto.zip'
+          name: 'standalone_pyrus'
+          path: 'dist/web/standalone_pyrus.zip'
