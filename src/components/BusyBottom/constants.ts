@@ -3,7 +3,6 @@ import {
   getKBHelpArticle,
   KB_HELP_ARTICLE,
   ROUTE_PATHS,
-  SUPPORT_EMAIL,
   WALLETS_CONFIG
 } from '@config';
 import { BusyBottomConfig, WalletId } from '@types';
@@ -13,7 +12,7 @@ const web3Config = getWeb3Config();
 
 const SUPPORT_LINK = {
   copy: 'BUSY_BOTTOM_SUPPORT',
-  link: `mailto:${SUPPORT_EMAIL}`,
+  link: 'https://discord.com/invite/ubiq',
   external: true
 };
 
@@ -22,8 +21,6 @@ export const configs: Record<
   { copy: string; link: string; copyVariables?: any; external?: boolean }[]
 > = {
   GENERAL: [
-    { copy: 'BUSY_BOTTOM_GENERAL_1', link: ROUTE_PATHS.CREATE_WALLET.path },
-    { copy: 'BUSY_BOTTOM_GENERAL_2', link: ROUTE_PATHS.DOWNLOAD_DESKTOP_APP.path },
     { copy: 'BUSY_BOTTOM_GENERAL_3', link: ROUTE_PATHS.SETTINGS_IMPORT.path },
     SUPPORT_LINK
   ],
