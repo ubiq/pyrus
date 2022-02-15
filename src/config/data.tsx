@@ -1,6 +1,5 @@
 import { NetworkId, TURL } from '@types';
 
-import { IS_DEV } from '../../environment';
 import packageJson from '../../package.json';
 
 // Displays in the footer
@@ -37,8 +36,7 @@ export const CRYPTOSCAMDB = 'https://cryptoscamdb.org';
 export const DEX_BASE_URLS: Partial<Record<NetworkId, string>> = {
   Ethereum: 'https://swap.mycryptoapi.com/',
   SmartChain: 'https://bsc.swap.mycryptoapi.com',
-  MATIC: 'https://polygon.swap.mycryptoapi.com',
-  ...(IS_DEV ? { Kovan: 'https://kovan.swap.mycryptoapi.com' } : {})
+  MATIC: 'https://polygon.swap.mycryptoapi.com'
 };
 export const DEX_NETWORKS = Object.keys(DEX_BASE_URLS);
 export const DEX_FEE_RECIPIENT = '0xD8D46494e200Fa585FC98f86e6A5Ea0DC1F18aD0';
@@ -66,9 +64,9 @@ export enum Theme {
 
 export type ThemeType = 'dark' | 'light';
 
-export const FAUCET_NETWORKS: NetworkId[] = ['Ropsten', 'Rinkeby', 'Kovan', 'Goerli'];
+export const FAUCET_NETWORKS: NetworkId[] = ['Ropsten'];
 
-export const ETHEREUM_NETWORKS: NetworkId[] = ['Ethereum', 'Ropsten', 'Rinkeby', 'Kovan', 'Goerli'];
+export const ETHEREUM_NETWORKS: NetworkId[] = ['Ethereum', 'Ropsten'];
 
 export const SUPPORTED_VIDEO_EXTENSIONS = ['mov', 'mp4', 'webm', 'ogv'];
 

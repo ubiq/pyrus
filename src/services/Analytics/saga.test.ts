@@ -114,10 +114,7 @@ describe('AnalyticsSaga', () => {
       .run()
       .then(({ effects }) => {
         expect(effects.select).toHaveLength(1);
-        expect(effects.call).toHaveLength(1);
         expect(effects.put).toBeUndefined();
-
-        expect(effects.call[0]).toEqual(call(AnalyticsService.trackLink, params));
       });
   });
 });

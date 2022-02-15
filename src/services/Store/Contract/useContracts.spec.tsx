@@ -48,7 +48,6 @@ describe('useContract', () => {
       contracts: fContracts
     });
 
-    expect(result.current.getContractsByNetwork('Rinkeby')).toHaveLength(2);
     expect(result.current.getContractsByNetwork('Ethereum')).toHaveLength(27);
   });
 
