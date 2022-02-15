@@ -47,20 +47,4 @@ describe('PurchaseMembershipStepper', () => {
     const selector = translateRaw('PURCHASE_MEMBERSHIP');
     expect(getByText(selector, { selector: 'p' })).toBeInTheDocument();
   });
-
-  it('can submit form', async () => {
-    const { getByText, getAllByText } = renderComponent();
-
-    const selector = truncate(fAccounts[0].address);
-    expect(getByText(selector)).toBeInTheDocument();
-
-    const button = getByText(translateRaw('BUY_MEMBERSHIP'));
-    expect(button).toBeInTheDocument();
-
-    fireEvent.click(button);
-
-    await waitFor(() =>
-      getAllByText(translateRaw('APPROVE_MEMBERSHIP')).forEach((s) => expect(s).toBeInTheDocument())
-    );
-  });
 });

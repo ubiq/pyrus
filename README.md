@@ -1,14 +1,14 @@
-# MyCrypto Web App
+# Pyrus Web App
 
 [![Build](https://github.com/MyCryptoHQ/MyCrypto/workflows/GitHub%20CI/badge.svg?branch=master)](https://github.com/MyCryptoHQ/MyCrypto/actions)
 [![codecov](https://codecov.io/gh/MyCryptoHQ/MyCrypto/branch/master/graph/badge.svg)](https://codecov.io/gh/MyCryptoHQ/MyCrypto)
 
-This repo stores the MyCrypto codebase. The code is served at [app.mycrypto.com](https://app.mycrypto.com)
+This repo stores the Pyrus codebase. The code is served at [app.mycrypto.com](https://app.mycrypto.com)
 
 #### Documentation can be found in [our wiki](https://github.com/MyCryptoHQ/MyCrypto/wiki)
 
-- [Contributor Guidelines](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributor-Guidelines) A must-read if you'd like to contribute to MyCrypto
-- [Getting your token added to MyCrypto](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Adding-Tokens)
+- [Contributor Guidelines](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributor-Guidelines) A must-read if you'd like to contribute to Pyrus
+- [Getting your token added to Pyrus](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Adding-Tokens)
 - [Adding your Network or Node](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Network-or-Node)
 - [Adding your Web3 Wallet & Logo](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Web3-Wallet)
 - [MyCryptoBuilds](https://github.com/MyCryptoHQ/MyCrypto/wiki/MyCryptoBuilds) - access a build by commithash, PR number, or branch name without building it yourself!
@@ -16,14 +16,14 @@ This repo stores the MyCrypto codebase. The code is served at [app.mycrypto.com]
 
 ## Development / Build Requirements
 
-- Node 12.14.1\*
+- Node >= 12\*
 - Yarn >= 1.19.1\*\*
 
 On systems where a pre-built version of node-hid is not available (e.g. 32-bit versions of Windows and Linux), you additionally need Python (3+) and node-gyp installed.
 
 <sub>\*Higher versions should work fine, but may cause inconsistencies.</sub>
 <br />
-<sub>\*\*npm is NOT supported for package management. MyCrypto uses yarn.lock to ensure sub-dependency versions are pinned, so yarn is required to install node_modules</sub>
+<sub>\*\*npm is NOT supported for package management. Pyrus uses yarn.lock to ensure sub-dependency versions are pinned, so yarn is required to install node_modules</sub>
 <br />
 <br />
 <sub>\*\*\*For users trying to build with WSL, you'll need to have install libpng via `sudo apt-get install libpng16-dev`.</sub>
