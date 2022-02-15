@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import addIcon from '@assets/images/icn-add-assets.svg';
 import { LinkApp } from '@components';
-import { BUY_MYCRYPTO_WEBSITE, ROUTE_PATHS } from '@config';
+import { ROUTE_PATHS } from '@config';
 import { COLORS } from '@theme';
 import translate, { Trans, translateRaw } from '@translations';
 
@@ -65,14 +65,7 @@ const NoAssets = ({ numOfAssets }: { numOfAssets: number }) => {
             />
           ) : (
             <Trans
-              id="WALLET_BREAKDOWN_NO_ASSETS_MORE"
-              variables={{
-                $link: () => (
-                  <LinkApp href={BUY_MYCRYPTO_WEBSITE} isExternal={true}>
-                    {translateRaw('WALLET_BREAKDOWN_BUY_ETH')}
-                  </LinkApp>
-                )
-              }}
+              id=""
             />
           )}
         </NoAssetsDescription>

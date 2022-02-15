@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { BigNumber } from '@ethersproject/bignumber';
-import { APP_STATE, fireEvent, mockAppState, simpleRender, waitFor } from 'test-utils';
+import { APP_STATE, mockAppState, simpleRender } from 'test-utils';
 
 import { fAccounts, fAssets, fDAI, fSettings } from '@fixtures';
 import { translateRaw } from '@translations';
-import { truncate } from '@utils';
 
 import PurchaseMembershipStepper from './PurchaseMembershipStepper';
 
