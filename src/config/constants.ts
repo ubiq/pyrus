@@ -10,7 +10,7 @@ export const MYC_API_MAINNET = 'https://api.mycryptoapi.com/eth';
 
 export const DEFI_RESERVE_MAPPING_URL = 'https://defi.mycryptoapi.com';
 
-export const GITHUB_RELEASE_NOTES_URL = 'https://github.com/MyCryptoHQ/MyCrypto/releases/latest' as TURL;
+export const GITHUB_RELEASE_NOTES_URL = 'https://github.com/ubiq/pyrus/releases/latest' as TURL;
 
 // The URL for Token Info API requests.
 export const TOKEN_INFO_URL = 'https://api.mycryptoapi.com/tokens';
@@ -80,7 +80,7 @@ export const ETH_SCAN_BATCH_SIZE = 300;
 export const DEFAULT_NUM_OF_ACCOUNTS_TO_SCAN = 5;
 export const DEFAULT_GAP_TO_SCAN_FOR = 5;
 
-export const SETTINGS_FILENAME = 'MyCrypto_Settings_File';
+export const SETTINGS_FILENAME = 'Pyrus_Settings_File';
 
 export const ASSET_DROPDOWN_SIZE_THRESHOLD = 150;
 
