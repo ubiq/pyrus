@@ -52,28 +52,6 @@ const ResourceItem: FC<ResourceItemProps> = ({ src, title, link }) => {
   );
 };
 
-const getResources = () => {
-  return (
-    <>
-      <ResourceItem
-        src={howBuyIcon}
-        title={translate('NOTIFICATIONS_WALLET_RESOURCE_BUY')}
-        link={getKBHelpArticle(BUY_CRYPTO)}
-      />
-      <ResourceItem
-        src={dontLoseCryptoIcon}
-        title={translate('NOTIFICATIONS_WALLET_RESOURCE_LOSE')}
-        link={getKBHelpArticle(SECURING_YOUR_ETH)}
-      />
-      <ResourceItem
-        src={questionsIcon}
-        title={translate('NOTIFICATIONS_WALLET_RESOURCE_SUPPORT')}
-        link={getKBHelpArticle(HOME)}
-      />
-    </>
-  );
-};
-
 export default function WalletsNotAddedNotification() {
   return (
     <NotificationWrapper
@@ -87,7 +65,7 @@ export default function WalletsNotAddedNotification() {
       }}
       title={translate('NOTIFICATIONS_WALLET_NOT_ADDED_TITLE')}
       description={translate('NOTIFICATIONS_WALLET_NOT_ADDED_DESCRIPTION')}
-      resources={getResources()}
+      resources={<></>}
     />
   );
 }
