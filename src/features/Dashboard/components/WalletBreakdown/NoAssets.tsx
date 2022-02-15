@@ -64,9 +64,7 @@ const NoAssets = ({ numOfAssets }: { numOfAssets: number }) => {
               }}
             />
           ) : (
-            <Trans
-              id=""
-            />
+            <Trans id="" />
           )}
         </NoAssetsDescription>
       </NoAssetsCenter>

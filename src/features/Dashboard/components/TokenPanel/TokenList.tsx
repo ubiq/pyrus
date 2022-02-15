@@ -158,9 +158,7 @@ export function TokenList(props: TokenListProps) {
                 {translate('NO_TOKENS_HEADER')}
               </Heading>
               <Body color={COLORS.BLUE_GREY} textAlign="center">
-                <Trans
-                  id=""
-                />
+                <Trans id="" />
               </Body>
             </>
           )}

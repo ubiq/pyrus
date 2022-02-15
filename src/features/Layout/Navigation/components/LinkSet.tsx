@@ -30,15 +30,7 @@ const SocialLink = ({ icon, link }: { icon: string; link: string }) => (
   </LinkApp>
 );
 
-const MYCLink = ({
-  title,
-  icon,
-  link
-}: {
-  title: string;
-  icon: string;
-  link: string
-}) => (
+const MYCLink = ({ title, icon, link }: { title: string; icon: string; link: string }) => (
   <LinkApp variant="barren" href={link} isExternal={true}>
     <SBox
       animation="small"
@@ -63,10 +55,7 @@ export const LinkSet = () => {
       {COMMIT_HASH && (
         <Box variant="rowAlign" justifyContent="flex-end">
           {'v.'}
-          <LinkApp
-            href={`https://github.com/ubiq/pyrus/commit/${COMMIT_HASH}`}
-            isExternal={true}
-          >
+          <LinkApp href={`https://github.com/ubiq/pyrus/commit/${COMMIT_HASH}`} isExternal={true}>
             {COMMIT_HASH.substr(0, 7)}
           </LinkApp>
         </Box>

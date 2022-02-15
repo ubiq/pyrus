@@ -232,11 +232,9 @@ export const SendAssetsForm = ({ txConfig, onComplete }: ISendFormProps) => {
   const defaultAccount = getDefaultAccount(defaultAsset);
   const defaultNetwork = getDefaultNetwork(defaultAccount);
 
-  const {
-    state: ptxState,
-    updateFormValues,
-    goToInitialStepOrFetchReport
-  } = useContext(ProtectTxContext);
+  const { state: ptxState, updateFormValues, goToInitialStepOrFetchReport } = useContext(
+    ProtectTxContext
+  );
 
   const SendAssetsSchema = object().shape({
     amount: string()
