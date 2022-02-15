@@ -13,8 +13,8 @@ import { WalletConnectWallet } from './walletconnect';
 import { unlockWeb3 } from './web3';
 
 const trezorManifest = {
-  email: 'support@mycrypto.com',
-  appUrl: 'https://app.mycrypto.com'
+  email: 'support@ubiqsmart.com',
+  appUrl: 'https://pyrus.ubiqsmart.com'
 };
 
 const web3 = {

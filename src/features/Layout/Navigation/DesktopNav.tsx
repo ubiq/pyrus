@@ -5,8 +5,8 @@ import { COLORS } from '@theme';
 import { translateRaw } from '@translations';
 import { INavigationProps } from '@types';
 
-import { Navbar, NavLink, NavTray, SupportUsTray, TrayItem } from './components';
-import { desktopLinks, settingsLinks, supportUsTray, toolsTray } from './constants';
+import { Navbar, NavLink, NavTray, TrayItem } from './components';
+import { desktopLinks, settingsLinks, toolsTray } from './constants';
 
 interface IDesktopNav extends INavigationProps {
   openTray(): void;
@@ -58,7 +58,6 @@ const DesktopNav = ({ appRoutes, current, openTray }: IDesktopNav) => {
               )
           )}
         />
-        <NavTray tray={supportUsTray} content={<SupportUsTray items={supportUsTray.items} />} />
       </Box>
       <NavLink link={settings} current={current === settings.to} />
       <SBox variant="columnCenter" width="100%" px="3px" py="12px" onClick={openTray}>

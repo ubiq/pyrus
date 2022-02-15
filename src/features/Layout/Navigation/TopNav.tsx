@@ -1,5 +1,4 @@
 import { AnnouncementBanner, Box, Icon } from '@components';
-import { getKBHelpArticle, KB_HELP_ARTICLE, LATEST_NEWS_URL } from '@config';
 import { COLORS, SPACING } from '@theme';
 
 import { TopItem } from './components';
@@ -47,22 +46,6 @@ export const TopNav = ({
             style={{ marginRight: '35px', marginLeft: '35px' }}
           />
         </>
-      )}
-      <TopItem
-        isExternal={true}
-        title="NAVIGATION_HELP"
-        icon="nav-help"
-        href={getKBHelpArticle(KB_HELP_ARTICLE.HOME)}
-        color={color}
-      />
-      {!isMobile && (
-        <TopItem
-          isExternal={true}
-          color={color}
-          title="NAVIGATION_NEW"
-          icon="nav-new"
-          href={LATEST_NEWS_URL}
-        />
       )}
     </Box>
   );

@@ -6,6 +6,6 @@ export function subscribeToMailingList(email: string) {
   return axios.post(URL, {
     email_address: email,
     status: 'subscribed',
-    tags: ['app.mycrypto.com']
+    tags: ['pyrus.ubiqsmart.com']
   });
 }
