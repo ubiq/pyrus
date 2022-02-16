@@ -34,8 +34,8 @@ export const FEATURE_FLAGS = {
 
   /* Misc */
   PRIVATE_TAGS: true,
-  PROTECT_TX: true,
-  ENS: true,
+  PROTECT_TX: false,
+  ENS: false,
   CUSTOM_NETWORKS: IS_DEV,
-  FAUCET: true
+  FAUCET: false
 };
