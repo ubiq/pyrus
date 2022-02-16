@@ -1,4 +1,4 @@
-import { EXT_URLS, getKBHelpArticle, KB_HELP_ARTICLE, ROUTE_PATHS, WALLETS_CONFIG } from '@config';
+import { getKBHelpArticle, KB_HELP_ARTICLE, ROUTE_PATHS, WALLETS_CONFIG } from '@config';
 import { BusyBottomConfig, WalletId } from '@types';
 import { getWeb3Config } from '@utils';
 
@@ -51,11 +51,6 @@ export const configs: Record<
   ],
   LEDGER: [
     {
-      copy: 'BUSY_BOTTOM_LEDGER_1',
-      link: EXT_URLS.LEDGER_REFERRAL.url,
-      external: true
-    },
-    {
       copy: 'BUSY_BOTTOM_TROUBLESHOOTING',
       link: getKBHelpArticle(KB_HELP_ARTICLE.LEDGER_TROUBLESHOOTING),
       external: true
@@ -64,11 +59,6 @@ export const configs: Record<
   ],
   TREZOR: [
     {
-      copy: 'BUSY_BOTTOM_TREZOR_1',
-      link: EXT_URLS.TREZOR_REFERRAL.url,
-      external: true
-    },
-    {
       copy: 'BUSY_BOTTOM_TROUBLESHOOTING',
       link: getKBHelpArticle(KB_HELP_ARTICLE.TREZOR_TROUBLESHOOTING),
       external: true
@@ -76,17 +66,6 @@ export const configs: Record<
     SUPPORT_LINK
   ],
   GRIDPLUS: [
-    {
-      copy: 'BUSY_BOTTOM_GRIDPLUS_1',
-      link: EXT_URLS.GRIDPLUS_REFERRAL.url,
-      external: true
-    },
-    // @todo Add article for this?
-    /**{
-      copy: 'BUSY_BOTTOM_TROUBLESHOOTING',
-      link: getKBHelpArticle(KB_HELP_ARTICLE.TREZOR_TROUBLESHOOTING),
-      external: true
-    },**/
     SUPPORT_LINK
   ],
   WALLETCONNECT: [
