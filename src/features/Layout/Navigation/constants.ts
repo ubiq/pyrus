@@ -151,13 +151,6 @@ export const mobileLinks = (APP_ROUTES: IAppRoutes) => {
           enabled: APP_ROUTES.TX_STATUS.enabled,
           title: translateRaw('NAVIGATION_TX_STATUS'),
           icon: 'nav-tx-status'
-        },
-        {
-          type: 'internal',
-          to: APP_ROUTES.NFT_DASHBOARD.path,
-          enabled: APP_ROUTES.NFT_DASHBOARD.enabled,
-          title: translateRaw('NFT_DASHBOARD'),
-          icon: 'nav-nft'
         }
       ]
     },
