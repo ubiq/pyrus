@@ -106,6 +106,7 @@ export const NETWORKS_CONFIG: NetworkConfig = {
       max: 800,
       initial: 80
     },
+    shouldEstimateGasPrice: true,
     supportsEIP1559: true
   },
   MATIC: {
