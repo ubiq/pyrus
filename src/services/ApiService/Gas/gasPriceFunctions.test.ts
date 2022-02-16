@@ -23,7 +23,7 @@ describe('fetchUniversalGasPriceEstimate', () => {
       fetchUniversalGasPriceEstimate({ ...fNetwork, supportsEIP1559: true })
     ).resolves.toStrictEqual({
       baseFee: bigify(10000000000),
-      estimate: { maxFeePerGas: '20', maxPriorityFeePerGas: '3' }
+      estimate: { maxFeePerGas: '100', maxPriorityFeePerGas: '80' }
     });
   });
 

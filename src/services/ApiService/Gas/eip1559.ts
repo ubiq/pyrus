@@ -12,7 +12,7 @@ const FEE_HISTORY_PERCENTILE = 5;
 // Which base fee to trigger priority fee estimation at
 const PRIORITY_FEE_ESTIMATION_TRIGGER = 100; // GWEI
 // Returned if above trigger is not met
-const DEFAULT_PRIORITY_FEE = bigify(toWei('3', getDecimalFromEtherUnit('gwei')));
+const DEFAULT_PRIORITY_FEE = bigify(toWei('80', getDecimalFromEtherUnit('gwei')));
 // In case something goes wrong fall back to this estimate
 export const FALLBACK_ESTIMATE = {
   maxFeePerGas: bigify(toWei('20', getDecimalFromEtherUnit('gwei'))),
