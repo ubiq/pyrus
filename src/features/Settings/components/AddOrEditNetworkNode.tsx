@@ -18,7 +18,6 @@ import {
 import {
   DEFAULT_NETWORK,
   ETHPLORER_URL,
-  EXT_URLS,
   GITHUB_RELEASE_NOTES_URL,
   LETS_ENCRYPT_URL
 } from '@config';
@@ -27,7 +26,7 @@ import { ProviderHandler } from '@services/EthService/network';
 import { NetworkUtils, useNetworks } from '@services/Store/Network';
 import { canDeleteNode as canDeleteNodeSelector, useSelector } from '@store';
 import { BREAK_POINTS, COLORS, SPACING } from '@theme';
-import { Trans, translateRaw } from '@translations';
+import { translateRaw } from '@translations';
 import {
   CustomNodeConfig,
   ExtendedAsset,
@@ -138,15 +137,6 @@ const DeleteButton = styled(Button)<{ disabled: boolean }>`
     background-color: ${COLORS.ERROR_RED};
   }
   `}
-`;
-
-const ReferralLink = styled.div`
-  margin-bottom: ${SPACING.BASE};
-
-  @media (max-width: ${BREAK_POINTS.SCREEN_XS}) {
-    margin-bottom: 0px;
-    margin-top: ${SPACING.BASE};
-  }
 `;
 
 interface NetworkNodeFields {
@@ -500,20 +490,6 @@ export default function AddOrEditNetworkNode({
                   </Field>
                 </AddressFieldset>
               </Column>
-            </Row>
-            <Row>
-              <ReferralLink>
-                <Trans
-                  id="CUSTOM_NODE_QUICKNODE_LINK"
-                  variables={{
-                    $link: () => (
-                      <LinkApp href={EXT_URLS.QUICKNODE_REFERRAL.url} isExternal={true}>
-                        {translateRaw('CUSTOM_NODE_QUICKNODE_TEXT')}
-                      </LinkApp>
-                    )
-                  }}
-                />
-              </ReferralLink>
             </Row>
             <Row>
               <Column>
