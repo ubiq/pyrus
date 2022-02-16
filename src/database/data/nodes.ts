@@ -52,6 +52,12 @@ export const NODES_CONFIG: { [key in NetworkId]: StaticNodeConfig[] } = {
       type: NodeType.RPC,
       service: 'ubiqscan.io',
       url: 'https://rpc1.ubiqscan.io'
+    },
+    {
+      name: NetworkUtils.makeNodeName('UBQ', 'ubiqsmart'),
+      type: NodeType.RPC,
+      service: 'ubiqsmart.com',
+      url: 'https://rpc.ubiqsmart.com'
     }
   ],
 
