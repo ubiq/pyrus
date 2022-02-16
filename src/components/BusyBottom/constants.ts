@@ -65,9 +65,7 @@ export const configs: Record<
     },
     SUPPORT_LINK
   ],
-  GRIDPLUS: [
-    SUPPORT_LINK
-  ],
+  GRIDPLUS: [SUPPORT_LINK],
   WALLETCONNECT: [
     {
       copy: 'BUSY_BOTTOM_WALLETCONNECT_1',
