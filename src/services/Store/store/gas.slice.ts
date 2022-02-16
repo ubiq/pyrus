@@ -2,7 +2,6 @@ import { createAction, createSelector, createSlice, PayloadAction } from '@redux
 import BigNumber from 'bignumber.js';
 import { all, call, put, select } from 'redux-saga/effects';
 
-import { DEFAULT_NETWORK } from '@config';
 import { ProviderHandler } from '@services/EthService';
 import { IPollingPayload, pollingSaga } from '@services/Polling';
 import { bigify } from '@utils';
@@ -60,7 +59,7 @@ export function* gasSaga() {
 }
 
 export function* fetchGas() {
-  const network = yield select(getNetwork(DEFAULT_NETWORK));
+  const network = yield select(getNetwork('UBQ'));
 
   const provider = new ProviderHandler(network);
 
