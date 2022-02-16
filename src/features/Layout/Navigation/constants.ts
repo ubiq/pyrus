@@ -70,13 +70,6 @@ export const toolsTray = (APP_ROUTES: IAppRoutes) => {
         enabled: APP_ROUTES.TX_STATUS.enabled,
         title: translateRaw('NAVIGATION_TX_STATUS'),
         icon: 'nav-tx-status'
-      },
-      {
-        type: 'internal',
-        to: APP_ROUTES.NFT_DASHBOARD.path,
-        enabled: APP_ROUTES.NFT_DASHBOARD.enabled,
-        title: translateRaw('NFT_DASHBOARD'),
-        icon: 'nav-nft'
       }
     ]
   };
@@ -199,11 +192,6 @@ export const socialLinks = [
 ];
 
 export const MYCLinks = [
-  {
-    title: translateRaw('NEW_FOOTER_TEXT_11'),
-    link: 'https://blog.ubiqsmart.com/',
-    icon: 'nav-blog'
-  },
   {
     title: translateRaw('NEW_FOOTER_TEXT_10'),
     link: 'https://mycrypto.com/privacy/',
