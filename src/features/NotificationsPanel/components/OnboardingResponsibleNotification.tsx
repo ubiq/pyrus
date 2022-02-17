@@ -3,9 +3,8 @@ import styled from 'styled-components';
 
 import jsonIcon from '@assets/images/onboarding/icn-json.svg';
 import privateIcon from '@assets/images/onboarding/icn-key-mnemonic.svg';
-import myCryptoIcon from '@assets/images/onboarding/icn-mnycrpto-app.svg';
 import phishingIcon from '@assets/images/onboarding/icn-phishing.svg';
-import { CRYPTOSCAMDB, DOWNLOAD_MYCRYPTO_LINK, getKBHelpArticle, KB_HELP_ARTICLE } from '@config';
+import { CRYPTOSCAMDB, getKBHelpArticle, KB_HELP_ARTICLE } from '@config';
 import { BREAK_POINTS, COLORS } from '@theme';
 import translate, { translateRaw } from '@translations';
 
@@ -120,16 +119,6 @@ export default function OnboardingResponsibleNotification() {
             <TipIcon width={30} height={40} src={jsonIcon} />
           </TipIconWrapper>
           <TipText>{translate('NOTIFICATIONS_ONBOARDING_RESPONSIBLE_JSON')}</TipText>
-        </TipItem>
-        <TipItem>
-          <TipIconWrapper>
-            <TipIcon width={50} height={40} src={myCryptoIcon} />
-          </TipIconWrapper>
-          <TipText>
-            {translate('NOTIFICATIONS_ONBOARDING_RESPONSIBLE_MYCRYPTO', {
-              $link: DOWNLOAD_MYCRYPTO_LINK
-            })}
-          </TipText>
         </TipItem>
       </Content>
     </NotificationWrapper>
