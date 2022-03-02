@@ -43,8 +43,8 @@ describe('estimateFees', () => {
     >).mockResolvedValueOnce(block);
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('10000000000'),
-      maxFeePerGas: bigify('100000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxFeePerGas: bigify('20000000000'),
+      maxPriorityFeePerGas: bigify('3000000000')
     });
   });
 
@@ -58,7 +58,7 @@ describe('estimateFees', () => {
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('100000000000'),
       maxFeePerGas: bigify('160000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxPriorityFeePerGas: bigify('5000000000')
     });
   });
 
@@ -85,7 +85,7 @@ describe('estimateFees', () => {
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('100000000000'),
       maxFeePerGas: bigify('160000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxPriorityFeePerGas: bigify('5000000000')
     });
   });
 
@@ -99,7 +99,7 @@ describe('estimateFees', () => {
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('75001494134'),
       maxFeePerGas: bigify('120000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxPriorityFeePerGas: bigify('3000000000')
     });
   });
 
@@ -113,7 +113,7 @@ describe('estimateFees', () => {
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('200000000000'),
       maxFeePerGas: bigify('280000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxPriorityFeePerGas: bigify('5000000000')
     });
   });
 
@@ -127,7 +127,7 @@ describe('estimateFees', () => {
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('300000000000'),
       maxFeePerGas: bigify('360000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxPriorityFeePerGas: bigify('5000000000')
     });
   });
 
@@ -140,8 +140,8 @@ describe('estimateFees', () => {
     >).mockResolvedValueOnce(feeHistory);
     return expect(estimateFees(mockProvider)).resolves.toStrictEqual({
       baseFee: bigify('7'),
-      maxFeePerGas: bigify('80000000000'),
-      maxPriorityFeePerGas: bigify('80000000000')
+      maxFeePerGas: bigify('3000000000'),
+      maxPriorityFeePerGas: bigify('3000000000')
     });
   });
 
