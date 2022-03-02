@@ -25,12 +25,12 @@ import {
 import TransactionFeeDisplay from '@components/TransactionFlow/displays/TransactionFeeDisplay';
 import {
   DEFAULT_ASSET_DECIMAL,
-  DEFAULT_NETWORK,
   ETHUUID,
   getKBHelpArticle,
   getWalletConfig,
   KB_HELP_ARTICLE,
-  ROUTE_PATHS
+  ROUTE_PATHS,
+  UBIQ_NETWORK
 } from '@config';
 import { getFiat } from '@config/fiats';
 import { ProtectTxContext } from '@features/ProtectTransaction/ProtectTxProvider';
@@ -227,7 +227,7 @@ export const SendAssetsForm = ({ txConfig, onComplete }: ISendFormProps) => {
     return undefined;
   };
   const getDefaultNetwork = (account?: StoreAccount) =>
-    networks.find((n) => n.id === (account !== undefined ? account.networkId : DEFAULT_NETWORK));
+    networks.find((n) => n.id === (account !== undefined ? account.networkId : UBIQ_NETWORK));
 
   const defaultAccount = getDefaultAccount(defaultAsset);
   const defaultNetwork = getDefaultNetwork(defaultAccount);

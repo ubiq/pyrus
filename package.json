@@ -1,10 +1,10 @@
 {
-  "name": "MyCrypto",
-  "author": "MyCryptoHQ",
+  "name": "Pyrus",
+  "author": "Ubiq",
   "version": "2.2.5",
   "main": "main.js",
-  "description": "MyCrypto is a free, open-source interface for interacting with the blockchain",
-  "repository": "https://github.com/MyCryptoHQ/MyCrypto",
+  "description": "Pyrus is a free, open-source interface for interacting with the blockchain",
+  "repository": "https://github.com/ubiq/pyrus",
   "engines": {
     "node": ">= 12.14.1",
     "npm": ">= 6.4.1",

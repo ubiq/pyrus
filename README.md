@@ -1,9 +1,8 @@
 # Pyrus Web App
 
-[![Build](https://github.com/MyCryptoHQ/MyCrypto/workflows/GitHub%20CI/badge.svg?branch=master)](https://github.com/MyCryptoHQ/MyCrypto/actions)
-[![codecov](https://codecov.io/gh/MyCryptoHQ/MyCrypto/branch/master/graph/badge.svg)](https://codecov.io/gh/MyCryptoHQ/MyCrypto)
+[![Build](https://github.com/ubiq/pyrus/workflows/GitHub%20CI/badge.svg?branch=master)](https://github.com/ubiq/pyrus/actions)
 
-This repo stores the Pyrus codebase. The code is served at [app.mycrypto.com](https://app.mycrypto.com)
+This repo stores the Pyrus codebase. The code is served at [pyrus.ubiqsmart.com](https://pyrus.ubiqsmart.com)
 
 #### Documentation can be found in [our wiki](https://github.com/MyCryptoHQ/MyCrypto/wiki)
 
@@ -11,7 +10,6 @@ This repo stores the Pyrus codebase. The code is served at [app.mycrypto.com](ht
 - [Getting your token added to Pyrus](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Adding-Tokens)
 - [Adding your Network or Node](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Network-or-Node)
 - [Adding your Web3 Wallet & Logo](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing-%E2%80%90-Web3-Wallet)
-- [MyCryptoBuilds](https://github.com/MyCryptoHQ/MyCrypto/wiki/MyCryptoBuilds) - access a build by commithash, PR number, or branch name without building it yourself!
 - [Enabling or disabling experimental features](https://github.com/MyCryptoHQ/MyCrypto/wiki/Feature-flags)
 
 ## Development / Build Requirements
@@ -95,17 +93,7 @@ NB. Since TestCafe has access to the node, the values are available at `process.
 
 ## Product Analytics
 
-We use product analytics to help us understand how to improve our features.
-
-The collection of usage data requires the use of unique identifiers which are stored in the browsers local storage. The id is random and can be removed or reset in the Settings panel. This ensures that our product team can identify places to improve the product, while at the same time protecting the users anonymity.
-
-We strive to provide access to the Ethereum blockchain in the most secure way possible, we refuse any dynamic script injections and only rely on HTTPS calls to the API. The calls are formatted using the excellant [@blockstock/stats](https://github.com/MyCryptoHQ/stats) library.
-
-Finally, since User privacy is part of our core values, we also take special care to ensure that the data we send to thrid-party servers is purged from any information which may be de-anonymised such as:
-
-- Every analytics call is sent to a MYC hosted reverse-proxy, strip of the users ip address and browser fingerprint before being forwarded to the data-warehouse (in this case )
-
-- never sending an ETH address or Transaction hash to our analytics warehouse.
+Pyrus has removed any analytics.
 
 ## Dependency verification.
 

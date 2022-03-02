@@ -72,11 +72,7 @@ const TxStatus = ({ history, location }: RouteComponentProps) => {
 
   // Update URL
   useUpdateEffect(() => {
-    if (networkId === UBIQ_NETWORK) {
-      history.replace(`${ROUTE_PATHS.TX_STATUS.path}/?hash=${txHash}`);
-    } else {
-      history.replace(`${ROUTE_PATHS.TX_STATUS.path}/?hash=${txHash}&network=${networkId}`);
-    }
+    history.replace(`${ROUTE_PATHS.TX_STATUS.path}/?hash=${txHash}&network=${networkId}`);
   }, [txHash, networkId]);
 
   useEffect(() => {
