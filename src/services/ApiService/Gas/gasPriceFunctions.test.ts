@@ -27,7 +27,7 @@ describe('fetchUniversalGasPriceEstimate', () => {
       )
     ).resolves.toStrictEqual({
       baseFee: bigify(10000000000),
-      estimate: { maxFeePerGas: '100', maxPriorityFeePerGas: '80' }
+      estimate: { maxFeePerGas: '20', maxPriorityFeePerGas: '3' }
     });
   });
 

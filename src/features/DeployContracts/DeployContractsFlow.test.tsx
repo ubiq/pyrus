@@ -63,7 +63,7 @@ describe('DeployContractsFlow', () => {
       }
     });
 
-    await waitFor(() => expect(getByDisplayValue('80')).toBeInTheDocument());
+    await waitFor(() => expect(getByDisplayValue('20')).toBeInTheDocument());
 
     fireEvent.click(getByText(translateRaw('NAV_DEPLOYCONTRACT')));
 
