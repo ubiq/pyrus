@@ -15,7 +15,7 @@ import {
   LinkApp,
   NetworkSelector
 } from '@components';
-import { UBIQ_NETWORK, ETHPLORER_URL, GITHUB_RELEASE_NOTES_URL, LETS_ENCRYPT_URL } from '@config';
+import { ETHPLORER_URL, GITHUB_RELEASE_NOTES_URL, LETS_ENCRYPT_URL, UBIQ_NETWORK } from '@config';
 import { useAssets } from '@services';
 import { ProviderHandler } from '@services/EthService/network';
 import { NetworkUtils, useNetworks } from '@services/Store/Network';

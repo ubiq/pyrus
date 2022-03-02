@@ -1,10 +1,10 @@
 import { isHexString } from 'ethjs-util';
 
 import {
-  UBIQ_NETWORK,
   DEFAULT_NONCE,
   GAS_LIMIT_LOWER_BOUND,
-  GAS_PRICE_GWEI_DEFAULT_HEX
+  GAS_PRICE_GWEI_DEFAULT_HEX,
+  UBIQ_NETWORK
 } from '@config';
 import { makeBasicTxConfig, makePendingTxReceipt, makeTxFromForm, toTxReceipt } from '@helpers';
 import { getGasEstimate, ProviderHandler, useAccounts } from '@services';
