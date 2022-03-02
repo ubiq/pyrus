@@ -1,4 +1,4 @@
-_Github issues are primarily for reporting bugs or getting assistance with development-related items. If you have a question or need support with our product, please email support@mycrypto.com for faster attention._
+_Github issues are primarily for reporting bugs or getting assistance with development-related items. If you have a question or need support with our product, please use Ubiq Discord for faster attention._
 
 _If you are reporting an issue, please use the template below so we can reproduce, determine the cause of the issue, and fix it! If you are not reporting an issue, delete this entire thing and type away. Thanks!_
 
@@ -22,8 +22,7 @@ _If you are reporting an issue, please use the template below so we can reproduc
 - Browser version:
 - Operating system:
 - Device:
-- MyCrypto.com vs Desktop Application?
-- MyCrypto Version Number:
+- Pyrus Version Number:
 
 ### Console Logs / Screenshots
 
