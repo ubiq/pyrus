@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Button, DashboardPanel, InputField, NetworkSelector } from '@components';
 import Icon from '@components/Icon';
-import { DEFAULT_ASSET_DECIMAL, DEFAULT_NETWORK } from '@config';
+import { DEFAULT_ASSET_DECIMAL, UBIQ_NETWORK } from '@config';
 import { CustomAssetService, isValidAddress, ProviderHandler } from '@services';
 import { useAssets, useNetworks } from '@services/Store';
 import { translateRaw } from '@translations';
@@ -45,7 +45,7 @@ export function AddToken(props: Props) {
   const [symbolError, setSymbolError] = useState('');
   const [addressError, setAddressError] = useState('');
   const [decimalsError, setDecimalsError] = useState('');
-  const [networkId, setNetworkId] = useState<NetworkId>(DEFAULT_NETWORK);
+  const [networkId, setNetworkId] = useState<NetworkId>(UBIQ_NETWORK);
   const [isFetching, setFetching] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -179,7 +179,7 @@ export function AddToken(props: Props) {
       <InputField
         name="custom-token-symbol"
         label={translateRaw('SYMBOL')}
-        placeholder={'ETH'}
+        placeholder={'UBQ'}
         onChange={handleChangeTicker}
         value={ticker}
         inputError={symbolError}

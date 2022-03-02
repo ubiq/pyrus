@@ -15,12 +15,7 @@ import {
   LinkApp,
   NetworkSelector
 } from '@components';
-import {
-  DEFAULT_NETWORK,
-  ETHPLORER_URL,
-  GITHUB_RELEASE_NOTES_URL,
-  LETS_ENCRYPT_URL
-} from '@config';
+import { UBIQ_NETWORK, ETHPLORER_URL, GITHUB_RELEASE_NOTES_URL, LETS_ENCRYPT_URL } from '@config';
 import { useAssets } from '@services';
 import { ProviderHandler } from '@services/EthService/network';
 import { NetworkUtils, useNetworks } from '@services/Store/Network';
@@ -192,7 +187,7 @@ export default function AddOrEditNetworkNode({
 
     return {
       name: '',
-      networkId: networkId || DEFAULT_NETWORK,
+      networkId: networkId || UBIQ_NETWORK,
       url: '',
       auth: false,
       username: '',

@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ExtendedContentPanel, Tabs, WALLET_STEPS } from '@components';
-import { DEFAULT_NETWORK, ROUTE_PATHS } from '@config';
+import { UBIQ_NETWORK, ROUTE_PATHS } from '@config';
 import { getNetworkById, useNetworks } from '@services/Store';
 import { getDefaultAccount, useSelector } from '@store';
 import { BREAK_POINTS } from '@theme';
@@ -55,7 +55,7 @@ const InteractWithContractsFlow = () => {
   const initialState = {
     ...interactWithContractsInitialState,
     account: defaultAccount,
-    network: getNetworkById(DEFAULT_NETWORK, networks)
+    network: getNetworkById(UBIQ_NETWORK, networks)
   };
   const {
     interactWithContractsState,

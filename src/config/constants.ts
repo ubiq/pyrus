@@ -46,6 +46,8 @@ export const DEFAULT_NETWORK_FOR_FALLBACK = 'ropsten';
 
 export const DEFAULT_NETWORK: NetworkId = 'Ethereum';
 
+export const UBIQ_NETWORK: NetworkId = 'UBQ';
+
 export const XDAI_NETWORK: NetworkId = 'xDAI';
 
 export const POLYGON_NETWORK: NetworkId = 'MATIC';

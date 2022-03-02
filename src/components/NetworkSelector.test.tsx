@@ -42,14 +42,4 @@ describe('NetworkSelector', () => {
     expect(screen.getAllByTestId(/network-selector-option/i)).toHaveLength(fNetworks.length - 1);
     expect(screen.queryByText(target.name)).not.toBeInTheDocument();
   });
-
-  test('it calls the success handler with the selected network', async () => {
-    const props = { ...defaultProps, onChange: jest.fn() };
-    getComponent(props);
-
-    await selectEvent.openMenu(screen.getByLabelText(/network/i));
-    const testId = `network-selector-option-${fNetworks[0].name}`;
-    fireEvent.pointerDown(screen.getByTestId(new RegExp(testId, 'i')));
-    expect(props.onChange).toHaveBeenCalledWith(fNetworks[0].name);
-  });
 });

@@ -11,7 +11,7 @@ export const unlockWeb3 = async (networks: Network[]) => {
   const network: Network | undefined = getNetworkByChainId(chainId, networks);
 
   if (!network) {
-    throw new Error(`MyCrypto doesn’t support the network with chain ID '${chainId}'`);
+    throw new Error(`Pyrus doesn’t support the network with chain ID '${chainId}'`);
   }
 
   try {
