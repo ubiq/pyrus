@@ -14,7 +14,7 @@ import {
   Spinner,
   TxReceipt
 } from '@components';
-import { DEFAULT_NETWORK, ROUTE_PATHS } from '@config';
+import { UBIQ_NETWORK, ROUTE_PATHS } from '@config';
 import { useAssets, useNetworks } from '@services';
 import { getMergedTxHistory, getStoreAccounts, useSelector } from '@store';
 import { COLORS, SPACING } from '@theme';
@@ -56,7 +56,7 @@ const TxStatus = ({ history, location }: RouteComponentProps) => {
   const txHistory = useSelector(getMergedTxHistory);
 
   const defaultTxHash = qs.hash ? qs.hash : '';
-  const defaultNetwork = qs.network ? qs.network : DEFAULT_NETWORK;
+  const defaultNetwork = qs.network ? qs.network : UBIQ_NETWORK;
 
   const initialState = generateInitialState(defaultTxHash, defaultNetwork);
 
@@ -72,7 +72,7 @@ const TxStatus = ({ history, location }: RouteComponentProps) => {
 
   // Update URL
   useUpdateEffect(() => {
-    if (networkId === DEFAULT_NETWORK) {
+    if (networkId === UBIQ_NETWORK) {
       history.replace(`${ROUTE_PATHS.TX_STATUS.path}/?hash=${txHash}`);
     } else {
       history.replace(`${ROUTE_PATHS.TX_STATUS.path}/?hash=${txHash}&network=${networkId}`);

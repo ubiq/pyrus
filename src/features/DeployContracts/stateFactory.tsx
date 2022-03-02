@@ -1,7 +1,7 @@
 import { isHexString } from 'ethjs-util';
 
 import {
-  DEFAULT_NETWORK,
+  UBIQ_NETWORK,
   DEFAULT_NONCE,
   GAS_LIMIT_LOWER_BOUND,
   GAS_PRICE_GWEI_DEFAULT_HEX
@@ -32,7 +32,7 @@ const deployContractsInitialState = {
   txConfig: undefined,
   txReceipt: undefined,
   byteCode: '',
-  networkId: DEFAULT_NETWORK
+  networkId: UBIQ_NETWORK
 };
 
 const DeployContractsFactory: TUseStateReducerFactory<DeployContractsState> = ({

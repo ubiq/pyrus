@@ -1,10 +1,10 @@
-import { DEFAULT_NETWORK } from '@config';
+import { UBIQ_NETWORK } from '@config';
 import { FormData, IAccountAdditionData, WalletId } from '@types';
 
 import { FormDataActionType as ActionType, FormDataAction } from './types';
 
 export const initialState: FormData = {
-  network: DEFAULT_NETWORK,
+  network: UBIQ_NETWORK,
   accountType: undefined,
   accountData: [] as IAccountAdditionData[],
   label: 'New Account'

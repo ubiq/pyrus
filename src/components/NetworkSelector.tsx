@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Overwrite } from 'utility-types';
 
 import { Body, Box, Selector, Tooltip } from '@components';
-import { DEFAULT_NETWORK } from '@config';
+import { UBIQ_NETWORK } from '@config';
 import { isWalletSupported, useNetworks } from '@services/Store';
 import { COLORS, SPACING } from '@theme';
 import translate from '@translations';
@@ -99,7 +99,7 @@ const NetworkSelector = ({
   // Provide the default network value to the form. @todo: Move responsability to form.
   useEffect(() => {
     if (network) return;
-    onChange(DEFAULT_NETWORK);
+    onChange(UBIQ_NETWORK);
   }, []);
 
   // @ADD_ACCOUNT_@todo: The difference in accountType is likely causing

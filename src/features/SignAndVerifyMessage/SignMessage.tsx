@@ -16,7 +16,7 @@ import {
   Text,
   WalletList
 } from '@components';
-import { DEFAULT_NETWORK, WALLETS_CONFIG } from '@config';
+import { UBIQ_NETWORK, WALLETS_CONFIG } from '@config';
 import { WalletConnectWallet } from '@services';
 import type { IFullWallet } from '@services/WalletService';
 import { AppState, getIsDemoMode, getWalletConnection, useSelector } from '@store';
@@ -130,7 +130,7 @@ function SignMessage({
               walletParams={params}
               onUnlock={onUnlock}
               formData={{
-                network: DEFAULT_NETWORK
+                network: UBIQ_NETWORK
               }}
             />
           )}
