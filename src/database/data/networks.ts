@@ -24,6 +24,35 @@ export type NetworkConfig = {
 };
 
 export const NETWORKS_CONFIG: NetworkConfig = {
+  UBQ: {
+    id: 'UBQ',
+    name: 'Ubiq',
+    unit: 'UBQ' as TTicker,
+    chainId: 8,
+    isCustom: false,
+    color: '#b37aff',
+    blockExplorer: makeExplorer({
+      name: 'Ubiqscan',
+      origin: 'https://ubiqscan.io'
+    }),
+    tokens: [],
+    contracts: require('./contracts/ubq.json'),
+    dPaths: {
+      [WalletId.TREZOR]: DEFAULT_UBQ,
+      [WalletId.LEDGER_NANO_S]: DEFAULT_UBQ,
+      [WalletId.TREZOR_NEW]: DEFAULT_UBQ,
+      [WalletId.LEDGER_NANO_S_NEW]: DEFAULT_UBQ,
+      [WalletId.GRIDPLUS]: DEFAULT_UBQ,
+      default: DEFAULT_UBQ
+    },
+    gasPriceSettings: {
+      min: 1,
+      max: 800,
+      initial: 80
+    },
+    shouldEstimateGasPrice: true,
+    supportsEIP1559: true
+  },
   Ethereum: {
     id: DEFAULT_NETWORK, // Ethereum Network Id
     name: 'Ethereum',
@@ -77,36 +106,6 @@ export const NETWORKS_CONFIG: NetworkConfig = {
       default: TESTNET_ETH
     },
     gasPriceSettings: GAS_PRICE_TESTNET,
-    supportsEIP1559: true
-  },
-
-  UBQ: {
-    id: 'UBQ',
-    name: 'Ubiq',
-    unit: 'UBQ' as TTicker,
-    chainId: 8,
-    isCustom: false,
-    color: '#b37aff',
-    blockExplorer: makeExplorer({
-      name: 'Ubiqscan',
-      origin: 'https://ubiqscan.io'
-    }),
-    tokens: [],
-    contracts: require('./contracts/ubq.json'),
-    dPaths: {
-      [WalletId.TREZOR]: DEFAULT_UBQ,
-      [WalletId.LEDGER_NANO_S]: DEFAULT_UBQ,
-      [WalletId.TREZOR_NEW]: DEFAULT_UBQ,
-      [WalletId.LEDGER_NANO_S_NEW]: DEFAULT_UBQ,
-      [WalletId.GRIDPLUS]: DEFAULT_UBQ,
-      default: DEFAULT_UBQ
-    },
-    gasPriceSettings: {
-      min: 1,
-      max: 800,
-      initial: 80
-    },
-    shouldEstimateGasPrice: true,
     supportsEIP1559: true
   },
   MATIC: {
