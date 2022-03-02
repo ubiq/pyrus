@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 
 import selectEvent from 'react-select-event';
-import { fireEvent, mockAppState, screen, simpleRender } from 'test-utils';
+import { mockAppState, screen, simpleRender } from 'test-utils';
 
 import { fNetworks } from '@fixtures';
 

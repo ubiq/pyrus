@@ -14,7 +14,7 @@ import {
   Spinner,
   TxReceipt
 } from '@components';
-import { UBIQ_NETWORK, ROUTE_PATHS } from '@config';
+import { ROUTE_PATHS, UBIQ_NETWORK } from '@config';
 import { useAssets, useNetworks } from '@services';
 import { getMergedTxHistory, getStoreAccounts, useSelector } from '@store';
 import { COLORS, SPACING } from '@theme';

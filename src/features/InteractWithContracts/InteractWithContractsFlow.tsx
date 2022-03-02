@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ExtendedContentPanel, Tabs, WALLET_STEPS } from '@components';
-import { UBIQ_NETWORK, ROUTE_PATHS } from '@config';
+import { ROUTE_PATHS, UBIQ_NETWORK } from '@config';
 import { getNetworkById, useNetworks } from '@services/Store';
 import { getDefaultAccount, useSelector } from '@store';
 import { BREAK_POINTS } from '@theme';
