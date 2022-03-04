@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import AppStoreBadgeIMG from '@assets/images/mobile/app-store-badge.png';
 import GooglePlayBadgeIMG from '@assets/images/mobile/google-play-badge.png';
 import { Body, Box, Button, Heading, LinkApp, Text } from '@components';
-import { DOWNLOAD_MYCRYPTO_LINK, WALLETS_CONFIG } from '@config';
+import { WALLETS_CONFIG } from '@config';
 import { BREAK_POINTS, SPACING } from '@theme';
 import translate from '@translations';
 import { useScreenSize } from '@utils';
@@ -90,12 +90,6 @@ const InstallMetaMask = () => {
         </Web3ImgContainer>
         <LinkApp href={provider.install!.getItLink!} isExternal={true}>
           <Button>{translate('PROVIDER_DOWNLOAD', { $provider: provider.name })}</Button>
-        </LinkApp>
-      </Box>
-      <Box style={{ textAlign: 'center' }} mt={4}>
-        {translate('ADD_ACCOUNT_WEB3_INSTALL_FOOTER')} <br />
-        <LinkApp href={DOWNLOAD_MYCRYPTO_LINK} isExternal={true}>
-          {translate('ADD_ACCOUNT_WEB3_INSTALL_FOOTER_LINK')}
         </LinkApp>
       </Box>
     </>
