@@ -8,7 +8,7 @@ import { object, string } from 'yup';
 import backArrowIcon from '@assets/images/icn-back-arrow.svg';
 import { DashboardPanel, InputField, NetworkSelector } from '@components';
 import GeneralLookupField from '@components/GeneralLookupField';
-import { DEFAULT_NETWORK } from '@config/constants';
+import { UBIQ_NETWORK } from '@config/constants';
 import { useToasts } from '@features/Toasts';
 import { useContacts, useNetworks } from '@services';
 import { isValidETHAddress } from '@services/EthService';
@@ -100,7 +100,7 @@ export default function AddToAddressBook({ toggleFlipped, createContact }: Props
             display: ''
           },
           notes: '',
-          network: DEFAULT_NETWORK
+          network: UBIQ_NETWORK
         }}
         onSubmit={(values, { setSubmitting }) => {
           createContact({ ...values, address: values.address.value });
