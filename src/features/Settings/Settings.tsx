@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { AccountList, Desktop, Icon, Mobile } from '@components';
 import MobileNavBar from '@components/MobileNavBar';
-import { DEFAULT_NETWORK } from '@config';
+import { UBIQ_NETWORK } from '@config';
 import { getFiat } from '@config/fiats';
 import FlippablePanel from '@features/Settings/components/FlippablePanel';
 import { buildBalances, buildTotalFiatValue } from '@helpers';
@@ -117,7 +117,7 @@ function RenderAddressPanel() {
 function RenderNetworkNodes() {
   const { networks: allNetworks, getNetworkById } = useNetworks();
   const { contacts } = useContacts();
-  const [networkId, setNetworkId] = useState<NetworkId>(DEFAULT_NETWORK);
+  const [networkId, setNetworkId] = useState<NetworkId>(UBIQ_NETWORK);
   const [editNode, setEditNode] = useState<CustomNodeConfig | undefined>(undefined);
   const [isAddingNetwork, setAddingNetwork] = useState(false);
 
