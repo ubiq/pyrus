@@ -3,7 +3,7 @@ import React from 'react';
 import BigNumber from 'bignumber.js';
 
 import { Box } from '@components';
-import { UBQUUID } from '@config';
+import { ETHUUID } from '@config';
 import { useRates } from '@services/Rates';
 import { getBaseFee, getFiatInformation, useSelector } from '@store';
 import { getAssetByUUID } from '@store/asset.slice';
@@ -15,7 +15,7 @@ import ActionTile from './ActionTile';
 
 export const DashboardGas = () => {
   const baseFee = useSelector(getBaseFee);
-  const ethAsset = useSelector(getAssetByUUID(UBQUUID as TUuid))!;
+  const ethAsset = useSelector(getAssetByUUID(ETHUUID as TUuid))!;
   const { getAssetRate } = useRates();
   const fiat = useSelector(getFiatInformation);
 
