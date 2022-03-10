@@ -10,7 +10,6 @@ import {
 } from '@store';
 import { IAccount } from '@types';
 
-import { isActiveFeature } from '../FeatureFlag';
 import { default as AnalyticsService, LinkParams, PageParams, TrackParams } from './Analytics';
 import { makeID } from './helpers';
 
@@ -47,7 +46,7 @@ export function* setAnalyticsID() {
 }
 
 export function* initAnalytics() {
-  const isActive = yield select(isActiveFeature('ANALYTICS'));
+  const isActive = false;
   const accounts: IAccount[] = yield select(getAccounts);
   const canTrack = yield select(canTrackProductAnalytics);
   if (isActive && canTrack) {

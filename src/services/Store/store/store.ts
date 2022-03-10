@@ -10,7 +10,6 @@ import {
   requestConnectionSuccess
 } from '@features/AddAccount/components/hdWallet.slice';
 import { messageUpdate, signMessage } from '@features/SignAndVerifyMessage';
-import { analyticsMiddleware } from '@services/Analytics';
 import { startBalancesPolling, startRatesPolling, updateAccounts } from '@store';
 import { IS_DEV } from '@utils';
 
@@ -54,7 +53,6 @@ export default function createStore(initialState?: PreloadedState<AppState>) {
         }
       }),
       sagaMiddleware,
-      analyticsMiddleware,
       // Logger MUST be last in chain.
       // https://github.com/LogRocket/redux-logger#usage
       ...(IS_DEV ? [createLogger({ collapsed: true })] : [])

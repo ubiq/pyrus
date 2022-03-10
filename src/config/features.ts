@@ -29,9 +29,6 @@ export const FEATURE_FLAGS = {
   SIGN_MESSAGE: 'core',
   VERIFY_MESSAGE: 'core',
 
-  /* Product Tools */
-  ANALYTICS: 'core',
-
   /* Misc */
   PRIVATE_TAGS: true,
   PROTECT_TX: false,
