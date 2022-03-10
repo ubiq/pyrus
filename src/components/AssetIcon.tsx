@@ -1,13 +1,12 @@
 import { ComponentProps, SyntheticEvent } from 'react';
 
-import { MYC_API } from '@config';
 import { getCoinGeckoAssetManifest, useSelector } from '@store';
 import { TUuid } from '@types';
 
 import Box from './Box';
 import { getSVGIcon } from './Icon';
 
-const baseURL = `${MYC_API}/images`;
+const baseURL = `/api/images`;
 
 function buildUrl(uuid: TUuid) {
   return `${baseURL}/${uuid}.png`;

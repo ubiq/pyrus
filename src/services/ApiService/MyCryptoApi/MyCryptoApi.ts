@@ -1,6 +1,5 @@
 import { AxiosInstance } from 'axios';
 
-import { MYC_API } from '@config';
 import { ExtendedAsset, ITxTypeMeta, TUuid, TxType } from '@types';
 import { mapObjIndexed } from '@vendor';
 
@@ -12,7 +11,7 @@ export default class MyCryptoApiService {
   public static instance = new MyCryptoApiService();
 
   private service: AxiosInstance = ApiService.generateInstance({
-    baseURL: MYC_API
+    baseURL: '/api'
   });
 
   constructor() {
