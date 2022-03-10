@@ -1,0 +1,145 @@
+{
+  "fe5dbbce-a5ce-5e29-88b8-c69bcfdfde89": {
+    "ticker": "UBQ",
+    "name": "Ubiq",
+    "decimal": 18,
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "base",
+    "mappings": {
+      "coinCapId": "ubiq",
+      "coinGeckoId": "ubiq",
+      "cryptoCompareId": "UBQ",
+      "cryptoCurrencyIconName": "ubq"
+    },
+    "uuid": "fe5dbbce-a5ce-5e29-88b8-c69bcfdfde89",
+    "isSwapRelevant": false
+  },
+  "3af0e000-d98f-58ea-8138-cf977ef73bd6": {
+    "ticker": "BEER",
+    "name": "BEER",
+    "decimal": 18,
+    "contractAddress": "0x7cdc0421469398e0f3aa8890693d86c840ac8931",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {
+      "cryptoCompareId": "BEER"
+    },
+    "uuid": "3af0e000-d98f-58ea-8138-cf977ef73bd6",
+    "isSwapRelevant": false
+  },
+  "bb6f956d-9b35-5a3d-9207-02db58d3c720": {
+    "ticker": "ESCH",
+    "name": "Escher",
+    "decimal": 18,
+    "contractAddress": "0xcf3222b7FDa7a7563b9E1E6C966Bead04AC23c36",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {},
+    "uuid": "bb6f956d-9b35-5a3d-9207-02db58d3c720",
+    "isSwapRelevant": false
+  },
+  "d3f40fe9-f59f-53f6-aa3d-24d332ae1512": {
+    "ticker": "GEO",
+    "name": "GeoCoin",
+    "decimal": 8,
+    "contractAddress": "0x500684CE0D4f04aBeDff3e54fCF8acC5E6CFc4bD",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {
+      "coinGeckoId": "geocoin",
+      "cryptoCompareId": "GEO"
+    },
+    "uuid": "d3f40fe9-f59f-53f6-aa3d-24d332ae1512",
+    "isSwapRelevant": false
+  },
+  "e0b5fc2d-afea-5a8f-8bae-150a3dddb83e": {
+    "ticker": "GRANS",
+    "name": "10grans",
+    "decimal": 18,
+    "contractAddress": "0x0826180A4c981d5095Cb5c48BB2A098A44cf6f73",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {},
+    "uuid": "e0b5fc2d-afea-5a8f-8bae-150a3dddb83e",
+    "isSwapRelevant": false
+  },
+  "86485dbc-035f-5544-b4f5-92cd1fe8dfa6": {
+    "ticker": "INK",
+    "name": "INK",
+    "decimal": 18,
+    "contractAddress": "0x7845fCbE28ac19ab7ec1C1D9674E34fdCB4917Db",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {},
+    "uuid": "86485dbc-035f-5544-b4f5-92cd1fe8dfa6",
+    "isSwapRelevant": false
+  },
+  "cd2dbd3a-cf6a-5e4d-8407-7a5363c383eb": {
+    "ticker": "SNARG",
+    "name": "Snarg01",
+    "decimal": 0,
+    "contractAddress": "0x497E20586F86c35592FF8F65CdE94F296514C387",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {},
+    "uuid": "cd2dbd3a-cf6a-5e4d-8407-7a5363c383eb",
+    "isSwapRelevant": false
+  },
+  "9c7b1611-0c80-5e7d-b3c4-218f86fa5088": {
+    "ticker": "SPHR",
+    "name": "Sphere",
+    "decimal": 8,
+    "contractAddress": "0x20e3dD746DdF519B23Ffbbb6Da7a5d33eA6349D6",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {
+      "coinCapId": "sphere",
+      "coinGeckoId": "sphere",
+      "cryptoCompareId": "SPHR"
+    },
+    "uuid": "9c7b1611-0c80-5e7d-b3c4-218f86fa5088",
+    "isSwapRelevant": false
+  },
+  "4a7872c8-826d-5c9c-94d5-82d99920ee47": {
+    "ticker": "SPHRC",
+    "name": "Sphere Cubed",
+    "decimal": 8,
+    "contractAddress": "0x402C2C3aceeb52b8654A0631012ceD49cbc9bDc4",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {},
+    "uuid": "4a7872c8-826d-5c9c-94d5-82d99920ee47",
+    "isSwapRelevant": false
+  },
+  "b061ff19-cdb7-5dce-841f-3297d80c6b88": {
+    "ticker": "TGE1",
+    "name": "Ubiq TGE 1",
+    "decimal": 18,
+    "contractAddress": "0xcf823eb6f62a30EDB005B91383e2fa364dd753Dc",
+    "support": {},
+    "social": {},
+    "networkId": "UBQ",
+    "type": "erc20",
+    "mappings": {},
+    "uuid": "b061ff19-cdb7-5dce-841f-3297d80c6b88",
+    "isSwapRelevant": false
+  }
+}
