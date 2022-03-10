@@ -32,19 +32,6 @@ describe('AnalyticsSaga', () => {
       .dispatch(trackEvent(params))
       .silentRun();
   });
-  it('trackInit(): noOps when feature is inactive', () => {
-    return expectSaga(initAnalytics)
-      .withState({
-        ...mockAppState({ [settingsSlice.name]: initialState }),
-        [featureFlagSlice.name]: { ANALYTICS: false }
-      })
-      .run()
-      .then(({ effects }) => {
-        expect(effects.select).toHaveLength(3);
-        expect(effects.call).toBeUndefined();
-        expect(effects.put).toBeUndefined();
-      });
-  });
   it('respects user tracking preferences', () => {
     const params: TrackParams = { action: 'Add Account' };
     return expectSaga(trackEventWorker, trackEvent(params))

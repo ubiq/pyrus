@@ -1,14 +1,12 @@
 import { useDispatch } from '@store';
 import { noOp } from '@utils';
 
-import { useFeatureFlags } from '../FeatureFlag';
 import { LinkParams, PageParams, TrackParams } from './Analytics';
 import { trackEvent, trackLink, trackPage } from './saga';
 
 const useAnalytics = () => {
   const dispatch = useDispatch();
-  const { isFeatureActive } = useFeatureFlags();
-  const isActive = isFeatureActive('ANALYTICS');
+  const isActive = false;
 
   // Replace all calls with noOp if feature is inactive
   return {
