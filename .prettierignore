@@ -73,4 +73,3 @@ node-scripts/**/*.js
 
 # Prettier specific
 __snapshots__
-static/matomo.js
