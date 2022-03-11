@@ -7,7 +7,6 @@ import {
   addCurrent,
   addCurrents,
   addExcludedAsset,
-  canTrackProductAnalytics,
   getCurrents,
   getExcludedAssets,
   getFiat,
@@ -19,7 +18,6 @@ import {
   setDemoMode,
   setFiat,
   setLanguage,
-  setProductAnalyticsAuthorisation,
   default as slice
 } from './settings.slice';
 
@@ -89,17 +87,5 @@ describe('settingsSlice', () => {
     const actual = reducer({ ...initialState, isDemoMode: false }, setDemoMode(true));
     const expected = true;
     expect(getIsDemoMode(actual)).toEqual(expected);
-  });
-
-  it('setProductAnalyticsAuthorisation(): can set value to false', () => {
-    const value = false;
-    const actual = reducer(initialState, setProductAnalyticsAuthorisation(value));
-    expect(canTrackProductAnalytics(actual)).toEqual(value);
-  });
-
-  it('setProductAnalyticsAuthorisation(): can set value to true', () => {
-    const value = true;
-    const actual = reducer(initialState, setProductAnalyticsAuthorisation(value));
-    expect(canTrackProductAnalytics(actual)).toEqual(value);
   });
 });

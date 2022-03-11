@@ -40,12 +40,6 @@ const slice = createSlice({
     },
     setDemoMode(state, action: PayloadAction<boolean>) {
       state.isDemoMode = action.payload;
-    },
-    setProductAnalyticsAuthorisation(state, action: PayloadAction<boolean>) {
-      state.canTrackProductAnalytics = action.payload;
-    },
-    setAnalyticsUserID(state, action: PayloadAction<string>) {
-      state.analyticsUserID = action.payload;
     }
   }
 });
@@ -58,9 +52,7 @@ export const {
   setFiat,
   addExcludedAsset,
   removeExcludedAsset,
-  setDemoMode,
-  setProductAnalyticsAuthorisation,
-  setAnalyticsUserID
+  setDemoMode
 } = slice.actions;
 
 export default slice;
@@ -75,11 +67,6 @@ export const getFiat = createSelector(getSettings, (s) => s.fiatCurrency);
 export const getFiatInformation = createSelector(getSettings, (s) => Fiats[s.fiatCurrency]);
 export const getExcludedAssets = createSelector(getSettings, (s) => s.excludedAssets);
 export const getIsDemoMode = createSelector(getSettings, (s) => s.isDemoMode);
-export const canTrackProductAnalytics = createSelector(
-  getSettings,
-  (s) => s.canTrackProductAnalytics
-);
-export const getAnalyticsUserID = createSelector(getSettings, (s) => s.analyticsUserID);
 /**
  * Actions
  */

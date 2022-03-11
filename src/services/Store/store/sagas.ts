@@ -2,7 +2,6 @@ import { all } from 'redux-saga/effects';
 
 import { hdWalletSaga } from '@features/AddAccount/components/hdWallet.slice';
 import { signMessageSaga } from '@features/SignAndVerifyMessage';
-import { analyticsSaga } from '@services/Analytics';
 
 import { accountsSaga } from './account.slice';
 import { accountUndoSaga } from './accountUndo.slice';
@@ -16,7 +15,6 @@ import { networkSaga } from './network.slice';
 import { nftSaga } from './nft.slice';
 import { notificationSaga } from './notification.slice';
 import { persistenceSaga } from './persistence.slice';
-import { promoPoapsSaga } from './promoPoaps.slice';
 import { ratesSaga } from './rates.slice';
 import { importSaga } from './root.reducer';
 import { settingsSaga } from './settings.slice';
@@ -33,7 +31,6 @@ export default function* rootSaga() {
     assetSaga(),
     importSaga(),
     scanTokensSaga(),
-    analyticsSaga(),
     persistenceSaga(),
     ratesSaga(),
     signMessageSaga(),
@@ -44,7 +41,6 @@ export default function* rootSaga() {
     accountUndoSaga(),
     nftSaga(),
     gasSaga(),
-    promoPoapsSaga(),
     connectionsSaga()
   ]);
 }

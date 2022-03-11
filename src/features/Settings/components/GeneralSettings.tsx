@@ -8,13 +8,7 @@ import styled from 'styled-components';
 import { DashboardPanel, Divider, LinkApp, SubHeading, Switch, Tooltip } from '@components';
 import { Fiats, ROUTE_PATHS } from '@config';
 import { getEIP1559FeatureFlag, setEIP1559FeatureFlag } from '@helpers';
-import {
-  AppState,
-  canTrackProductAnalytics,
-  getFiat,
-  setFiat,
-  setProductAnalyticsAuthorisation
-} from '@store';
+import { AppState, getFiat, setFiat } from '@store';
 import { BREAK_POINTS, COLORS, SPACING } from '@theme';
 import translate from '@translations';
 import { TFiatTicker } from '@types';
@@ -126,15 +120,13 @@ const GeneralSettings = ({ fiatCurrency, setFiat }: Props) => {
 };
 
 const mapStateToProps = (state: AppState) => ({
-  fiatCurrency: getFiat(state),
-  canTrackProductAnalytics: canTrackProductAnalytics(state)
+  fiatCurrency: getFiat(state)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<AnyAction>) =>
   bindActionCreators(
     {
-      setFiat,
-      setProductAnalyticsAuthorisation
+      setFiat
     },
     dispatch
   );

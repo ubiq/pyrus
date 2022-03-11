@@ -6,13 +6,7 @@ import { AppLoading } from '@components';
 import { ROUTE_PATHS } from '@config';
 import { Dashboard, PageNotFound } from '@features';
 import { Layout, LayoutConfig } from '@features/Layout';
-import {
-  DefaultHomeHandler,
-  getAppRoutes,
-  LegacyRoutesHandler,
-  PageVisitsAnalytics,
-  PrivateRoute
-} from '@routing';
+import { DefaultHomeHandler, getAppRoutes, LegacyRoutesHandler, PrivateRoute } from '@routing';
 import { useFeatureFlags } from '@services';
 import { SPACING } from '@theme';
 import { ScrollToTop, useScreenSize } from '@utils';
@@ -56,7 +50,6 @@ export const AppRoutes = () => {
   return (
     <>
       <ScrollToTop />
-      <PageVisitsAnalytics />
       <DefaultHomeHandler>
         <Suspense
           fallback={

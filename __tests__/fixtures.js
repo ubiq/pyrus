@@ -127,7 +127,6 @@ const FIXTURE_LOCALSTORAGE_WITH_ONE_ACC = {
     }
   },
   settings: {
-    canTrackProductAnalytics: true,
     fiatCurrency: 'USD',
     darkMode: false,
     dashboardAccounts: ['1782c060-8bc0-55d6-8078-ff255b4aae90'],
@@ -261,7 +260,6 @@ const FIXTURE_HARDHAT = {
     }
   },
   settings: {
-    canTrackProductAnalytics: true,
     fiatCurrency: 'USD',
     darkMode: false,
     dashboardAccounts: ['4a236c90-b722-5e26-8718-659db6b5d302'],

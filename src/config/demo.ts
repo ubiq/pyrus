@@ -2877,16 +2877,6 @@ export const DEMO_SETTINGS = {
       state: 'hidden',
       uuid: 'e2c59196-42bd-4dc5-84be-af0c11ccbeeb'
     },
-    '206bda29-adbf-4acb-9d10-22d42badb0af': {
-      name: 'myc_winter_start',
-      state: 'new',
-      uuid: '206bda29-adbf-4acb-9d10-22d42badb0af'
-    },
-    'ba102a93-ba7d-46d3-9532-428501a6420b': {
-      name: 'myc_winter_mid',
-      state: 'hidden',
-      uuid: 'ba102a93-ba7d-46d3-9532-428501a6420b'
-    },
     'fce0fd16-f2c3-4b17-b867-072e0f5b33cd': {
       name: 'migrate_lend',
       state: 'new',
