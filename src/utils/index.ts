@@ -49,7 +49,6 @@ export {
   buildEIP681TokenRequest
 } from './formatters';
 export { makeBlob } from './blob';
-export { default as consoleAdvertisement } from './consoleAdvertisement';
 export {
   formatErrorEmail,
   formatSupportEmail,

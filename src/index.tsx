@@ -11,7 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { FeatureFlagProvider } from '@services';
 import { createStore } from '@store';
-import { consoleAdvertisement, getRootDomain, IS_DEV, IS_E2E } from '@utils';
+import { getRootDomain, IS_DEV, IS_E2E } from '@utils';
 import { ethereumMock } from '@vendor';
 
 /**
@@ -39,10 +39,6 @@ document.addEventListener('drop', doNothing, false);
 if (IS_E2E) {
   // ONLY FOR TESTING
   (window as CustomWindow).ethereum = ethereumMock();
-}
-
-if (!IS_DEV) {
-  consoleAdvertisement();
 }
 
 const { store, persistor } = createStore();

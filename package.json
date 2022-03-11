@@ -11,7 +11,6 @@
     "yarn": ">= 1.19.1"
   },
   "dependencies": {
-    "@datapunt/matomo-tracker-js": "0.4.0",
     "@ethersproject/abstract-provider": "5.5.1",
     "@ethersproject/address": "5.5.0",
     "@ethersproject/bignumber": "5.5.0",

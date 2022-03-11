@@ -111,10 +111,6 @@ const affiliateLinks: IExtUrl[] = [
     url: 'https://app.pooltogether.com/?referrer=0x3186f968aaa3a670354e33a9ad679d98858dda5b' as TURL
   },
   {
-    name: 'MYCRYPTO_WINTER_REFERRAL',
-    url: 'https://winter.mycrypto.com/?utm_source=mycrypto&utm_medium=banner&utm_campaign=winter' as TURL
-  },
-  {
     name: 'SWAP_REFERRAL',
     url: 'https://app.mycrypto.com/swap?utm_medium=mycrypto&utm_source=dashboard&utm_campaign=swap' as TURL
   },
@@ -147,8 +143,6 @@ export const UNISWAP_LINK = 'https://app.uniswap.org/';
 export const DAPPNODE_AIRDROP_LINK = 'https://app.dappnode.io/nodedrop';
 export const ENS_AIRDROP_LINK = 'https://claim.ens.domains/';
 export const GIV_AIRDROP_LINK = 'https://giv.giveth.io/claim';
-
-export const MYC_WINTER_LINK = 'https://winter.mycrypto.com';
 
 export const TWEET_LINK = 'https://twitter.com/intent/tweet?text=';
 

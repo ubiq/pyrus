@@ -6,7 +6,5 @@ export const defaultSettings = {
   dashboardAccounts: [],
   excludedAssets: [],
   language: 'en',
-  isDemoMode: false,
-  canTrackProductAnalytics: false,
-  analyticsUserID: ''
+  isDemoMode: false
 };

@@ -7,5 +7,3 @@ coverage:
         threshold: 10%
         target: auto
         base: auto
-ignore:
-  - '**/analytics.middleware.ts'

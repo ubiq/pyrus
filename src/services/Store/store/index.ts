@@ -108,10 +108,6 @@ export {
   setDemoMode,
   getIsDemoMode,
   addAccountsToCurrents,
-  canTrackProductAnalytics,
-  setProductAnalyticsAuthorisation,
-  getAnalyticsUserID,
-  setAnalyticsUserID,
   getSettings,
   getFiatInformation
 } from './settings.slice';
@@ -129,5 +125,4 @@ export { getClaims, getAllClaims } from './claims.slice';
 export { restoreAccount, deleteAccount, getAccountUndoCache } from './accountUndo.slice';
 export { fetchNFTs, getFetched, getNFTsByCollection, getTotalValue } from './nft.slice';
 export { getBaseFee } from './gas.slice';
-export { checkForPromos, getPromoPoap, claimPromo } from './promoPoaps.slice';
 export { getWalletConnection, connectWallet } from './connections.slice';

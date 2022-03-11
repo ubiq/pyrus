@@ -2,8 +2,6 @@ import { combineReducers } from '@reduxjs/toolkit';
 import { REHYDRATE } from 'redux-persist';
 import { all, put, takeLatest } from 'redux-saga/effects';
 
-import { trackInit } from '@services';
-
 import accountSlice, { startBalancesPolling, startTxPolling } from './account.slice';
 import assetSlice, { fetchAssets } from './asset.slice';
 import claimsSlice, { fetchClaims } from './claims.slice';
@@ -17,7 +15,6 @@ import { fetchMemberships } from './membership.slice';
 import networkSlice from './network.slice';
 import notificationSlice from './notification.slice';
 import { APP_PERSIST_CONFIG } from './persist.config';
-import promoPoapsSlice, { checkForPromos } from './promoPoaps.slice';
 import ratesSlice, { startRatesPolling } from './rates.slice';
 import settingsSlice from './settings.slice';
 import trackedAssetsSlice from './trackedAssets.slice';
@@ -41,7 +38,6 @@ const persistenceReducer = combineReducers({
   [notificationSlice.name]: notificationSlice.reducer,
   [settingsSlice.name]: settingsSlice.reducer,
   [userActionSlice.name]: userActionSlice.reducer,
-  [promoPoapsSlice.name]: promoPoapsSlice.reducer,
   [connectionsSlice.name]: connectionsSlice.reducer,
   [claimsSlice.name]: claimsSlice.reducer
 });
@@ -62,7 +58,6 @@ export function* persistenceSaga() {
 
 function* handleRehydrateSuccess(action: IRehydrate) {
   if (action.key === APP_PERSIST_CONFIG.key) {
-    yield put(trackInit());
     yield put(fetchAssets());
     yield put(fetchSchemaMeta());
     yield put(fetchMemberships());
@@ -73,6 +68,5 @@ function* handleRehydrateSuccess(action: IRehydrate) {
     yield put(fetchENS());
     yield put(fetchClaims());
     yield put(startGasPolling());
-    yield put(checkForPromos());
   }
 }
