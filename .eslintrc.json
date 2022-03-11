@@ -3,7 +3,7 @@
   "parser": "@typescript-eslint/parser",
   "extends": ["eslint:recommended", "eslint-config-prettier", "plugin:eslint-plugin-import/errors"],
   "plugins": ["eslint-plugin-react", "eslint-plugin-import"],
-  "ignorePatterns": ["**/static/matomo.js", "hardhat.config.ts", "jest_config", "node-scripts"],
+  "ignorePatterns": ["hardhat.config.ts", "jest_config", "node-scripts"],
   "rules": {
     "eqeqeq": ["error", "always", { "null": "ignore" }],
     "import/first": "error",
