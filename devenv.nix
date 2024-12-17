@@ -6,4 +6,10 @@
     package = pkgs.nodejs_22;
     yarn.enable = true;
   };
+
+  packages = [
+    pkgs.autoreconfHook
+    pkgs.nasm
+    pkgs.zlib
+  ];
 }

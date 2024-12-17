@@ -148,7 +148,11 @@ module.exports = {
             options: {
               bypassOnDebug: true,
               optipng: {
-                optimizationLevel: 4
+                enabled: false
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4
               },
               gifsicle: {
                 interlaced: true
@@ -159,13 +163,16 @@ module.exports = {
               svgo: {
                 plugins: [
                   {
-                    removeViewBox: true
+                    name: 'removeViewBox',
+                    active: true
                   },
                   {
-                    removeEmptyAttrs: false
+                    name: 'removeEmptyAttrs',
+                    active: false
                   },
                   {
-                    sortAttrs: true
+                    name: 'sortAttrs',
+                    active: true
                   }
                 ]
               }
