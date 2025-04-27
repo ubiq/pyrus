@@ -45,7 +45,7 @@ export const socialMediaLinks: Link[] = [
     icon: null
   },
   {
-    link: 'https://discord.com/invite/ubiq',
+    link: 'https://discord.com/invite/XaqzJB4',
     text: 'discord',
     icon: null
   },

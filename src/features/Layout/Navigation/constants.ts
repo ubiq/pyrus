@@ -179,7 +179,7 @@ export const socialLinks = [
     icon: 'nav-reddit'
   },
   {
-    link: 'https://discord.com/invite/ubiq',
+    link: 'https://discord.com/invite/XaqzJB4',
     icon: 'nav-discord'
   }
 ];

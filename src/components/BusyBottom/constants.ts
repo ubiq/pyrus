@@ -6,7 +6,7 @@ const web3Config = getWeb3Config();
 
 const SUPPORT_LINK = {
   copy: 'BUSY_BOTTOM_SUPPORT',
-  link: 'https://discord.com/invite/ubiq',
+  link: 'https://discord.com/invite/XaqzJB4',
   external: true
 };
 

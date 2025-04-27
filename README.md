@@ -14,8 +14,8 @@ This repo stores the Pyrus codebase. The code is served at [pyrus.ubiqsmart.com]
 
 ## Development / Build Requirements
 
-- Node >= 12\*
-- Yarn >= 1.19.1\*\*
+- Node >= 22\*
+- Yarn >= 1.22.22\*\*
 
 On systems where a pre-built version of node-hid is not available (e.g. 32-bit versions of Windows and Linux), you additionally need Python (3+) and node-gyp installed.
 
