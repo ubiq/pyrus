@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v4
 
       # Install system dependencies required by some node packages (like node-hid)
-      - name: Install libusb-1.0-dev
-        run: sudo apt-get update && sudo apt-get install -y libusb-1.0-0-dev
+      - name: Install build dependencies for native modules
+        run: sudo apt-get update && sudo apt-get install -y libusb-1.0-0-dev libudev-dev
 
       - name: Retrieve node version from .nvmrc
         id: nvm
