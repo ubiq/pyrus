@@ -12,8 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Retrieve node version from .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
 
       - name: Setup node ${{ steps.nvm.outputs.NVMRC }}
@@ -26,7 +27,7 @@ jobs:
 
       - name: Set outputs
         id: vars
-        run: echo "::set-output name=sha::$(git rev-parse HEAD)"
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       - name: yarn build
         run: yarn build

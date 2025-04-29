@@ -24,8 +24,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Read .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
         id: nvm
+        run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_OUTPUT
 
       - name: Setup node ${{ steps.nvm.outputs.NVMRC }}
         uses: actions/setup-node@v4
@@ -64,9 +64,10 @@ jobs:
       - name: Retrieves project from the git branch
         uses: actions/checkout@v4
 
-      - name: Retrieve node version from .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//')"
+      - name: Retrieve node version from package.json
         id: nvm
+        run: echo "NVMRC=$(jq -r '.engines.node' package.json)" >> $GITHUB_OUTPUT
+
 
       - name: Setup node ${{ steps.nvm.outputs.NVMRC }}
         uses: actions/setup-node@v4
