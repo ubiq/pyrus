@@ -192,27 +192,30 @@ export default function GeneratedInteractionForm({
       setIsLoading(true);
 
       // Clean the function inputs: ensure each input value is a string, default to ''
-      const cleanedInputs = submitedFunction.inputs.map(input => ({
-          ...input,
-          // Ensure value is a string. Default to empty string if undefined, null, or empty.
-          value: (input.value !== undefined && input.value !== null && String(input.value).length > 0)
-                   ? String(input.value)
-                   : ''
+      const cleanedInputs = submitedFunction.inputs.map((input) => ({
+        ...input,
+        // Ensure value is a string. Default to empty string if undefined, null, or empty.
+        value:
+          input.value !== undefined && input.value !== null && String(input.value).length > 0
+            ? String(input.value)
+            : ''
       }));
 
       // Clean the payAmount field: ensure it's a string, default to '0' if needed
-      const cleanedPayAmount = (submitedFunction.payAmount !== undefined && submitedFunction.payAmount !== null && String(submitedFunction.payAmount).length > 0)
-                               ? String(submitedFunction.payAmount)
-                               : '0';
+      const cleanedPayAmount =
+        submitedFunction.payAmount !== undefined &&
+        submitedFunction.payAmount !== null &&
+        String(submitedFunction.payAmount).length > 0
+          ? String(submitedFunction.payAmount)
+          : '0';
 
       const cleanedABIItem: ABIItem = {
-          ...submitedFunction,
-          inputs: cleanedInputs,
-          payAmount: cleanedPayAmount,
+        ...submitedFunction,
+        inputs: cleanedInputs,
+        payAmount: cleanedPayAmount
       };
 
       await handleInteractionFormWriteSubmit(cleanedABIItem);
-
     } catch (e) {
       setError(e.reason ? e.reason : e.message);
     } finally {
